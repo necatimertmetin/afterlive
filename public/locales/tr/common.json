@@ -77,13 +77,22 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "Barların Nabzını Canlı Tutun",
-        "button": "Canlı İzle"
+        "title1": "Tüm Türkiyede",
+        "title2": "Barların Nabzını Canlı Tutun",
+        "button": "ŞU ANDA NELER VAR"
       },
       "ourStory": {
-        "title": "Hikayemiz",
-        "description": "Afterlive'de, harika bir kahve deneyiminin sadece demleme ile ilgili olmadığına inanıyoruz. Bu samimi atmosfer, sıcak misafirperverlik ve her yudumunuza eşlik eden lezzetli ikramlar. Kahvemiz, günlük koşturmacadan kaçabileceğiniz, iyi bir arkadaşlık, aromatik kahve ve nefis hamur işlerinin basit zevklerini yaşayabileceğiniz bir sığınaktır.",
-        "aboutUs": "Hakkımızda"
+        "title1": "Her şey o tanıdık soruyla başladı",
+        "title2": "'AFTER NEREDE!?'",
+        "description1": "Bu soru, sadece bir merak değil — bir kültür, bir ihtiyaçtı.",
+        "description2": "Biz o gecelerde, bu sorunun peşine düştük.",
+        "description3": "Ve şimdi cevabı burada",
+        "highlights": [
+          "Canlı DJ performansları",
+          "Mekanlardan gerçek zamanlı yayın",
+          "Gecenin ritmi, ekranında"
+        ],
+        "slogan": "Ritmi yakala. Enerjiyi hisset. Geceyi yaşa."
       },
       "whatWeHave": {
         "title": "Neler Sunuyoruz",

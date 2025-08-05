@@ -40,8 +40,8 @@ const LightTheme = createTheme({
       paper: "#ffffff", // Kart zemin
     },
     text: {
-      primary: "#1B1B1B", // Koyu gri
-      secondary: "#555555", // Yardımcı yazılar
+      primary: "#fff", // Koyu gri
+      secondary: "#fff", // Yardımcı yazılar
     },
     customBackground: {
       box: "#FFF5F5", // Kırmızımsı açık kutu rengi
@@ -114,8 +114,8 @@ const DarkTheme = createTheme({
       paper: "#161616", // Kartlar
     },
     text: {
-      primary: "#ccc",
-      secondary: "#B0B0B0",
+      primary: "#eeeeee",
+      secondary: "#eeeeee",
     },
     customBackground: {
       box: "#1C1C1C",

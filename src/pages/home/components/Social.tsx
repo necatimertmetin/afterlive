@@ -29,7 +29,7 @@ export const Social = () => {
           }}
         >
           <Link
-            href="https://www.instagram.com/golbahcetesisleri/"
+            href="https://www.instagram.com/"
             target="_blank"
             rel="noopener"
             aria-label="Instagram"
@@ -95,7 +95,7 @@ export const Social = () => {
               }}
               aria-label="Instagram hashtag golbahce"
             >
-              #golbahcetesisleri
+              #afterlive
             </Link>{" "}
             {translate("text.suffix")}
           </Typography>

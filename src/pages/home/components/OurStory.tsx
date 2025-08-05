@@ -1,10 +1,9 @@
-import { Grid, Typography, Button } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Grid, Typography } from "@mui/material";
 import { useTranslate } from "../../../hooks/useTranslation";
 
 export const OurStory = () => {
-  const theme = useTheme();
   const { translate } = useTranslate("pages.home.ourStory");
+
   return (
     <Grid
       container
@@ -33,37 +32,18 @@ export const OurStory = () => {
             fontSize: { xs: "2rem", md: "3rem" },
           }}
         >
-          {translate("title")}
+          {translate("title1")}
         </Typography>
-        <Typography
-          variant="h4"
-          sx={{
-            color: theme.palette.text.secondary,
-            lineHeight: 1.6,
-            fontSize: { xs: "1.1rem", md: "1.3rem" },
-            fontWeight: 400,
-          }}
-        >
-          {translate("description")}
+        <Typography variant="h3" color="error">
+          {translate("title2")}
         </Typography>
-
-        <Button
-          variant="outlined"
-          size="large"
-          onClick={() => {
-            window.location.href = "/about";
-          }}
-          sx={{
-            fontSize: { xs: "1.2rem", md: "1.5rem" },
-            px: { xs: 4, md: 6 },
-            py: { xs: 1.5, md: 2 },
-            borderWidth: 2,
-            borderRadius: 3,
-            transition: "all 0.3s ease",
-          }}
-        >
-          {translate("aboutUs")}
-        </Button>
+        <Typography variant="h5">
+          {translate("description1")}
+          <br />
+          {translate("description2")}
+          <br />
+          {translate("description3")}
+        </Typography>
       </Grid>
     </Grid>
   );

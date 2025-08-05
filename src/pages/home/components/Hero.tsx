@@ -49,19 +49,19 @@ export const Hero = () => {
             py: { xs: 4, md: 0 },
           }}
         >
-          <Typography
-            variant="h3"
-            sx={{
-              width: { xs: "100%", md: "60vw" },
-              color: (theme) => theme.palette.text.primary,
-              lineHeight: { xs: 1.2, md: 1.1 },
-            }}
-          >
-            {translate("title")}
-          </Typography>
+          <Stack spacing={2}>
+            <Typography variant="h3">{translate("title1")}</Typography>
+            <Typography variant="h2" fontWeight={600}>
+              {translate("title2")}
+            </Typography>
+          </Stack>
 
-          <Button size="large" color="inherit" variant="outlined">
-            {translate("button")}
+          <Button
+            sx={{ height: "64px", width: "256px" }}
+            color="inherit"
+            variant="outlined"
+          >
+            <Typography>{translate("button")}</Typography>
           </Button>
         </Stack>
       </Stack>
