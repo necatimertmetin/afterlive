@@ -3,6 +3,7 @@ import { About } from "../pages/about/About";
 import { Contact } from "../pages/contact/Contact";
 import { PrivacyPolicy } from "../pages/privacy/PrivacyPolicy";
 import { Home } from "../pages/home/Home";
+import { Live } from "../pages/live/Live";
 
 export type AppRoute = {
   path: string;
@@ -22,8 +23,8 @@ export const ROUTES: AppRoute[] = [
   },
 
   {
-    path: "/about",
-    element: <About />,
+    path: "/live",
+    element: <Live />,
     labelKey: "live",
     showInMenu: true,
     showInFooter: true,
