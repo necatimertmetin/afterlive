@@ -87,26 +87,20 @@
         "description1": "Bu soru, sadece bir merak değil — bir kültür, bir ihtiyaçtı.",
         "description2": "Biz o gecelerde, bu sorunun peşine düştük.",
         "description3": "Ve şimdi cevabı burada",
-        "highlights": [
-          "Canlı DJ performansları",
-          "Mekanlardan gerçek zamanlı yayın",
-          "Gecenin ritmi, ekranında"
-        ],
+
         "slogan": "Ritmi yakala. Enerjiyi hisset. Geceyi yaşa."
       },
       "whatWeHave": {
-        "title": "Neler Sunuyoruz",
-        "subtitle": "En kaliteli malzemeler ve lezzet tutkusu ile hazırlanan menümüz, büyüleyici kahve kreasyonları, taze pişmiş ürünler ve lezzetli atıştırmalıklar sunuyor.",
-        "items": {
-          "gozleme": "Gözleme",
-          "kahvalti": "Kahvaltı",
-          "izgara": "Izgara"
-        }
+        "title": "AFTERLIVE da neler var?",
+        "subtitle": "Afterlive, seni müziğin kalbine ışınlar. Evde olabilirsin ama gece hep seninle.",
+        "option1": "Canlı DJ performansları",
+        "option2": "Mekanlardan gerçek zamanlı yayın",
+        "option3": "Gecenin ritmi, ekranında"
       },
       "social": {
         "text": {
           "prefix": "Deneyimlerinizi",
-          "suffix": "ile bizimle paylaşın"
+          "suffix": "ile paylaşın"
         }
       }
     },
