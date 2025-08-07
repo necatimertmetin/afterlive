@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Box, Grid } from "@mui/material";
-import { Stories } from "./components/carousel/stories";
+import { Grid } from "@mui/material";
+import { Stories } from "./components/carousel/Stories";
 import { mockData } from "./components/data"; // import edildi
 
 export const Live = () => {
@@ -8,7 +8,7 @@ export const Live = () => {
   const selected = mockData[selectedId];
 
   return (
-    <Box sx={{ width: "100%", padding: "20px 0" }}>
+    <>
       <Stories
         stories={mockData}
         onSelect={(id: number) => setSelectedId(id)}
@@ -38,6 +38,6 @@ export const Live = () => {
           />
         </Grid>
       </Grid>
-    </Box>
+    </>
   );
 };

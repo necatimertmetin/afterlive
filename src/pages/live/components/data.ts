@@ -24,5 +24,37 @@ export const mockData = [
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "https://picsum.photos/seed/location3/200/150",
   },
+  {
+    id: 1,
+    label: "Bar Lumos",
+    color: "#1890FF",
+    image: "https://picsum.photos/seed/club2/256",
+    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    locationImg: "https://picsum.photos/seed/location2/200/150",
+  },
+  {
+    id: 2,
+    label: "Electra",
+    color: "#52C41A",
+    image: "https://picsum.photos/seed/club3/256",
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    locationImg: "https://picsum.photos/seed/location3/200/150",
+  },
+  {
+    id: 1,
+    label: "Bar Lumos",
+    color: "#1890FF",
+    image: "https://picsum.photos/seed/club2/256",
+    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+    locationImg: "https://picsum.photos/seed/location2/200/150",
+  },
+  {
+    id: 2,
+    label: "Electra",
+    color: "#52C41A",
+    image: "https://picsum.photos/seed/club3/256",
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    locationImg: "https://picsum.photos/seed/location3/200/150",
+  },
   // ...devamı
 ];
