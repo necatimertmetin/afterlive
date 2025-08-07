@@ -59,7 +59,7 @@ export const Header = () => {
 
   return (
     <AppBar
-      position="absolute"
+      position="relative"
       sx={{ backgroundColor: "#00000088" }}
       elevation={0}
     >

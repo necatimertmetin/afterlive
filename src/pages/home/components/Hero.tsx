@@ -9,7 +9,7 @@ export const Hero = () => {
     <Box
       sx={{
         position: "relative",
-        height: "calc(100vh)",
+        height: "calc(100vh - 64px)",
         backgroundImage: `url(${heroImg})`,
         backgroundPosition: "center",
       }}

@@ -9,6 +9,8 @@ import i18n from "./i18n/i18n";
 import { PageLayout } from "./components/layout/PageLayout";
 import { ColorModeContextProvider } from "./provider/ColorModeProvider";
 import { ROUTES } from "./routes/Routes";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const rtlLanguages = ["ar", "he", "fa", "ur"];
 
