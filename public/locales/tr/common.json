@@ -54,10 +54,12 @@
         "home": "Ana Sayfa",
         "about": "Hakkımızda",
         "menu": "Menü",
+        "live": "Canlı",
         "contact": "İletişim",
         "product": "Ürünlerimiz",
         "gallery": "Galeri"
       },
+
       "workingHours": {
         "title": "Çalışma Saatleri",
         "monday": "Pazartesi",
@@ -71,7 +73,7 @@
         "phone": "+90 (532) 217 34 75"
       },
       "privacyPolicy": "Gizlilik Politikası",
-      "copyright": "Afterlive Tesisleri. Tüm hakları saklıdır."
+      "copyright": "© {{year}} Afterlive. Gecenin ritmi seninle."
     }
   },
   "pages": {

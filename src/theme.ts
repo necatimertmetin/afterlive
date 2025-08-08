@@ -101,13 +101,13 @@ const DarkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#FF3D3D", // Parlak kırmızı
-      light: "#FF6E6E",
-      dark: "#B71C1C",
+      main: "#ff0000", // Parlak kırmızı
+      light: "#ff0000",
+      dark: "#ff0000",
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#E53935", // Kırmızı vurgu tonu
+      main: "#ff0000", // Kırmızı vurgu tonu
     },
     background: {
       default: "#0B0B0B", // Saf siyah arka plan
@@ -137,7 +137,7 @@ const DarkTheme = createTheme({
         root: {
           backgroundColor: "#161616",
           height: "64px",
-          color: "#FF3D3D",
+          color: "#ff0000",
         },
       },
     },
@@ -163,9 +163,9 @@ const DarkTheme = createTheme({
           ...(ownerState.variant === "contained" &&
             ownerState.color === "primary" && {
               color: "#ffffff",
-              backgroundColor: "#FF3D3D",
+              backgroundColor: "#ff0000",
               "&:hover": {
-                backgroundColor: "#D32F2F",
+                backgroundColor: "#ff0000",
               },
             }),
         }),

@@ -1,14 +1,13 @@
 import { Box, Grid, Typography, Link, Stack } from "@mui/material";
 import logo from "/images/logo/logo.png";
+import { useTranslate } from "../../../hooks/useTranslation";
 export const Footer = () => {
+  const { translate } = useTranslate("layout.footer");
   return (
     <Box
       component="footer"
       p={5}
       sx={{
-        bgcolor: "#0d0d0d",
-        color: "#fff",
-
         borderTop: "5px solid #ff0000",
       }}
     >
@@ -22,18 +21,18 @@ export const Footer = () => {
           <Stack spacing={1}>
             <Link href="/" color="inherit" underline="hover">
               <Typography variant="h1" fontWeight={"bold"}>
-                Anasayfa
+                {translate("quickLinks.home")}
               </Typography>
             </Link>
             <Link href="/live" color="inherit" underline="hover">
               <Typography variant="h1" fontWeight={"bold"}>
-                Canli
+                {translate("quickLinks.live")}
               </Typography>
             </Link>
 
             <Link href="/contact" color="inherit" underline="hover">
               <Typography variant="h1" fontWeight={"bold"}>
-                Iletisim
+                {translate("quickLinks.contact")}
               </Typography>
             </Link>
           </Stack>
@@ -43,7 +42,7 @@ export const Footer = () => {
       {/* Alt Kısım */}
       <Stack direction={"row"} justifyContent={"space-between"}>
         <Typography color="error" variant="body2">
-          © {new Date().getFullYear()} Afterlive. Gecenin ritmi seninle.
+          {translate("copyright", { year: new Date().getFullYear() })}
         </Typography>
         <Stack direction={"row"} spacing={2}>
           <Typography color="error" variant="body2">

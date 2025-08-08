@@ -1,7 +1,6 @@
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   Stack,
   IconButton,
@@ -28,6 +27,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslate } from "../../../hooks/useTranslation";
 import { ROUTES } from "../../../routes/Routes";
 import { useLocation } from "react-router-dom";
+import logo from "/images/logo/logoWide.png";
 
 export const Header = () => {
   const colorMode = useContext(ColorModeContext);
@@ -66,32 +66,14 @@ export const Header = () => {
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ minHeight: { xs: 56, sm: 64 } }}>
           <Stack direction={"row"} flexGrow={1}>
-            <Typography
-              variant="h5"
-              component={Link}
-              to="/"
-              sx={{
-                textDecoration: "none",
-                color: theme.palette.text.primary,
-                fontWeight: 700,
-                fontSize: { xs: "1.25rem", sm: "1.5rem" },
+            <img
+              src={logo}
+              alt="AfterLive"
+              style={{
+                maxHeight: "24px",
+                width: "auto",
               }}
-            >
-              After
-            </Typography>
-            <Typography
-              variant="h5"
-              component={Link}
-              to="/"
-              sx={{
-                textDecoration: "none",
-                color: theme.palette.primary.main,
-                fontWeight: 700,
-                fontSize: { xs: "1.25rem", sm: "1.5rem" },
-              }}
-            >
-              Live
-            </Typography>
+            />
           </Stack>
 
           {/* Desktop Navigation */}
