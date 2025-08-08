@@ -44,7 +44,12 @@ export const Contact = () => {
                 rows={4}
               />
               <Stack direction={"row"} justifyContent={"flex-end"}>
-                <Button type="submit" variant="contained" color="primary">
+                <Button
+                  size="large"
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                >
                   <Typography fontWeight={"bold"}>Gönder</Typography>
                 </Button>
               </Stack>
