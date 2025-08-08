@@ -1,54 +1,38 @@
 {
   "seo": {
     "home": {
-      "title": "Ana Sayfa | Golbahçe",
-      "desc": "Golbahçe restoranına hoş geldiniz. Lezzetli yemekler ve eşsiz atmosfer sizi bekliyor.",
-      "ogTitle": "Golbahçe Restaurant - Ana Sayfa",
-      "ogDesc": "En taze malzemelerle hazırlanan nefis yemeklerimizi keşfedin."
+      "title": "Ana Sayfa | Afterlive"
     },
     "about": {
-      "title": "Hakkımızda | Golbahçe",
-      "desc": "Golbahçe'nin hikayesi, misyonu ve vizyonu hakkında bilgi alın.",
-      "ogTitle": "Hakkımızda - Golbahçe",
-      "ogDesc": "Yılların deneyimi ve tutkuyla hazırlanan lezzetlerimizin hikayesi."
+      "title": "Hakkımızda | Afterlive"
     },
     "contact": {
-      "title": "İletişim | Golbahçe",
-      "desc": "Golbahçe ile iletişime geçin. Adres, telefon ve rezervasyon bilgileri.",
-      "ogTitle": "İletişim - Golbahçe",
-      "ogDesc": "Bize ulaşın, rezervasyon yapın ve sorularınızı iletin."
+      "title": "İletişim | Afterlive"
     },
-    "products": {
-      "title": "Ürünlerimiz | Golbahçe",
-      "desc": "Golbahçe'nin özel ürünleri ve lezzetleri hakkında bilgi alın.",
-      "ogTitle": "Ürünlerimiz - Golbahçe",
-      "ogDesc": "Özenle seçilmiş malzemelerle hazırlanan özel ürünlerimiz."
+    "live": {
+      "title": "Canlı | Afterlive"
     },
-    "menu": {
-      "title": "Menü | Golbahçe",
-      "desc": "Golbahçe menüsü - Ana yemekler, başlangıçlar, tatlılar ve içecekler.",
-      "ogTitle": "Menü - Golbahçe",
-      "ogDesc": "Zengin menümüzden damak zevkinize uygun lezzetleri seçin."
+    "events": {
+      "title": "Etkinklikler | Afterlive"
+    },
+    "blog": {
+      "title": "Blog | Afterlive"
     },
     "default": {
-      "title": "Golbahçe Restaurant",
-      "desc": "Golbahçe - Lezzet ve kalitenin buluştuğu nokta.",
-      "ogTitle": "Golbahçe Restaurant",
-      "ogDesc": "Eşsiz lezzetler ve unutulmaz deneyimler için Golbahçe'yi ziyaret edin."
+      "title": "Afterlive"
     }
   },
   "layout": {
     "header": {
-      "home": "Anasayfa",
-      "live": "Canlı",
-      "events": "Etkinlikler",
-      "blog": "Blog",
-      "about": "Hakkımızda",
-      "contact": "İletişim"
+      "home": "ANASAYFA",
+      "live": "CANLı",
+      "events": "ETKİNLİKLER",
+      "blog": "BLOG",
+      "about": "HAKKIMIZDA",
+      "contact": "İLETİŞİM"
     },
     "footer": {
-      "brand": "Afterlive Tesisleri",
-      "description": "Göl manzarasında unutulmaz anlar yaşayın. Kaliteli kahve, taze lezzetler ve sıcak atmosfer.",
+      "brand": "Afterlive",
       "quickLinks": {
         "title": "Hızlı Linkler",
         "home": "Ana Sayfa",
@@ -58,19 +42,6 @@
         "contact": "İletişim",
         "product": "Ürünlerimiz",
         "gallery": "Galeri"
-      },
-
-      "workingHours": {
-        "title": "Çalışma Saatleri",
-        "monday": "Pazartesi",
-        "closed": "Kapalı",
-        "tueSun": "Salı-Pazar",
-        "hours": "08:00 - 24:00"
-      },
-      "contact": {
-        "title": "İletişim",
-        "address": "Dutluca Yolu, Dutluca\nNo:253/1 Orhangazi̇/Bursa",
-        "phone": "+90 (532) 217 34 75"
       },
       "privacyPolicy": "Gizlilik Politikası",
       "copyright": "© {{year}} Afterlive. Gecenin ritmi seninle."
@@ -106,340 +77,6 @@
         }
       }
     },
-    "menu": {
-      "title": "Menü",
-      "price": "Fiyat",
-      "extras": "Extralar",
-      "contents": "İÇERİKLER",
-      "breakfast": {
-        "title": "Kahvaltılıklar",
-        "description": "Günün en önemli öğününde bitirilemeyen tabaklar!! Koccaman Lezzetler…",
-        "items": {
-          "serpme_single": {
-            "title": "Serpme Kahvaltı (Tek Kişilik)",
-            "description": "Peynir (3 çeşit), Yeşillik Tabağı, Zeytin (2 çeşit), Tereyağ, Bal, Reçel (2 çeşit), Kaymak, Sıcak Tabağı (Pişi + Sigara Böreği + Patates Kızartması), Erken Hasat Zeytinyağı, Acuka - Ceviz - Kayısı",
-
-            "extras": {
-              "egg_with_pastirma": {
-                "title": "Pastırmalı Yumurta",
-                "description": "Lezzetli pastırmayla hazırlanmış yumurta."
-              },
-              "egg_with_sucuk": {
-                "title": "Sucuklu Yumurta",
-                "description": "Sucuklu enfes yumurta."
-              },
-              "menemen_varieties": {
-                "title": "Menemen Çeşitleri",
-                "description": "Taze domates, biber ve yumurtadan yapılan menemen çeşitleri."
-              },
-              "omelet_varieties": {
-                "title": "Omlet Çeşitleri",
-                "description": "Çeşitli malzemelerle hazırlanmış omletler."
-              },
-              "sucuk_plate": {
-                "title": "Sucuk Tabağı",
-                "description": "Baharatlı sucuk dilimleri."
-              },
-              "sosis_plate": {
-                "title": "Sosis Tabağı",
-                "description": "Lezzetli sosis dilimleri."
-              },
-              "chips_plate": {
-                "title": "Cips Tabağı",
-                "description": "Kıtır çıtır patates cipsi."
-              },
-              "pisi_plate": {
-                "title": "Pişi Tabağı",
-                "description": "Kızarmış hamur tatlısı pişi."
-              },
-              "sigara_boregi": {
-                "title": "Sigara Böreği",
-                "description": "İçli ince börek ruloları."
-              },
-              "pacanga_boregi": {
-                "title": "Paçanga Böreği",
-                "description": "Pastırmalı, kaşarlı börek."
-              },
-              "kuymak": {
-                "title": "Kuymak",
-                "description": "Mıhlama olarak da bilinen yöresel lezzet."
-              },
-              "hellim": {
-                "title": "Hellim",
-                "description": "Kıbrıs peyniri hellim ile hazırlanmış özel lezzet."
-              }
-            }
-          },
-
-          "allergens": {
-            "egg": "Yumurta"
-          }
-        }
-      },
-      "toast": {
-        "title": "Tostlar",
-        "description": "Basit Değil, Efsane!",
-        "items": {
-          "karisik": {
-            "title": "Karışık",
-            "description": "Domates, biber, sucuk ve peynirli karışık tost."
-          },
-          "kasarli": {
-            "title": "Kaşarlı Tost",
-            "description": "Bol kaşarlı, çıtır çıtır tost."
-          }
-        }
-      },
-      "gozleme": {
-        "title": "Gözlemeler",
-        "description": "Sacın Üzerinde Aşk Var!",
-        "items": {
-          "peynirli": {
-            "title": "Peynirli",
-            "description": "Bol peynir dolgulu gözleme."
-          },
-          "patatesli": {
-            "title": "Patatesli",
-            "description": "Baharatlı patatesli gözleme."
-          },
-          "kasarli": {
-            "title": "Kaşarlı",
-            "description": "Erimiş kaşarlı gözleme."
-          }
-        }
-      },
-      "burger": {
-        "title": "Burgerler",
-        "description": "Parmak Isırtan İkili: Burger & Patates Aşkı!",
-        "items": {
-          "burger_combo": {
-            "title": "Hamburger + Patates Kızartması + İçecek",
-            "description": "Lezzetli hamburger yanında patates ve içecek."
-          },
-          "cig_borek": {
-            "title": "Çiğ Börek",
-            "description": "Klasik Çiğ Börek lezzeti."
-          }
-        }
-      },
-      "pasta": {
-        "title": "Makarnalar",
-        "description": "3 farklı makarna ile Koccaman Lezzetler!",
-        "items": {
-          "bolonez": {
-            "title": "Bolonez Soslu Makarna + İçecek",
-            "description": "Klasik Bolonez soslu makarna."
-          },
-          "penne": {
-            "title": "Penne Soslu Makarna + İçecek",
-            "description": "Lezzetli penne soslu makarna."
-          },
-          "manti": {
-            "title": "Mantı",
-            "description": "Ev yapımı mantı, yoğurt ve sos ile."
-          }
-        }
-      },
-      "grill": {
-        "title": "Izgaralar",
-        "description": "Ateşle Buluşan Lezzetler!",
-        "items": {
-          "kofte": {
-            "title": "Izgara Köfte + Salata + Patates Kızartması",
-            "description": "Izgara köfte, yanında salata ve patates kızartması."
-          },
-          "citir_tavuk": {
-            "title": "Çıtır Tavuk + Salata + Patates Kızartması",
-            "description": "Çıtır tavuk, salata ve patates eşliğinde."
-          },
-          "sucuk": {
-            "title": "Sucuk + Salata + Patates Kızartması",
-            "description": "Izgara sucuk, salata ve patatesle."
-          },
-          "tavuk_kanat": {
-            "title": "Tavuk Kanat + Salata + Patates Kızartması",
-            "description": "Lezzetli tavuk kanatları, salata ve patates."
-          }
-        }
-      },
-      "cold_drinks": {
-        "title": "Soğuk İçecekler",
-        "description": "Serinleten Bir Yudum Ferahlık!",
-        "items": {
-          "mineral": {
-            "title": "Maden Suyu",
-            "description": "Serinletici maden suyu."
-          },
-          "fruit_mineral": {
-            "title": "Meyveli Maden Suyu",
-            "description": "Meyve aromalı maden suyu."
-          },
-          "cola_can": {
-            "title": "Kola Kutu",
-            "description": "Klasik kola kutusu."
-          },
-          "fanta_can": {
-            "title": "Fanta Kutu",
-            "description": "Fanta meyveli gazoz kutusu."
-          },
-          "cola_bottle": {
-            "title": "Kola Şişe",
-            "description": "Kola cam şişede."
-          },
-          "uludag_gazoz": {
-            "title": "Uludağ Gazoz",
-            "description": "Uludağ markalı gazoz."
-          },
-          "lemonade": {
-            "title": "Limonata",
-            "description": "Ev yapımı limonata."
-          },
-          "ice_tea": {
-            "title": "Ice Tea",
-            "description": "Soğuk buzlu çay."
-          },
-          "ayran": {
-            "title": "Ayran",
-            "description": "Yoğurtlu ferahlatıcı içecek."
-          },
-          "water": {
-            "title": "Su",
-            "description": "Doğal kaynak suyu."
-          },
-          "fruit_juice": {
-            "title": "Meyve Suyu",
-            "description": "Taze meyve suyu."
-          },
-          "frozen_varieties": {
-            "title": "Frozen Çeşitleri",
-            "description": "Soğuk buzlu içecek çeşitleri."
-          },
-          "milkshake": {
-            "title": "Milkshake",
-            "description": "Kremalı sütlü milkshake."
-          },
-          "iced_coffee": {
-            "title": "Soğuk Kahve",
-            "description": "Buzlu soğuk kahve."
-          },
-          "churchill": {
-            "title": "Churchill",
-            "description": "Özel kahve karışımı."
-          }
-        }
-      },
-      "hot_drinks": {
-        "title": "Sıcak İçecekler",
-        "description": "Buharıyla Bile Dinlendirir!",
-        "items": {
-          "tea": {
-            "title": "Çay",
-            "description": "Klasik siyah çay."
-          },
-          "turkish_coffee": {
-            "title": "Türk Kahvesi",
-            "description": "Özel kavrulmuş Türk kahvesi."
-          },
-          "nescafe": {
-            "title": "Neskafe",
-            "description": "Hızlı hazırlanabilen kahve."
-          },
-          "filter_coffee": {
-            "title": "Filtre Kahve",
-            "description": "Filtre kahve tadında."
-          },
-          "espresso": {
-            "title": "Espresso",
-            "description": "Yoğun aromalı espresso."
-          },
-          "doppio": {
-            "title": "Doppio",
-            "description": "Çift shot espresso."
-          },
-          "herbal_tea": {
-            "title": "Bitki Çayı",
-            "description": "Rahatlatıcı bitki çayı çeşitleri."
-          },
-          "hot_chocolate": {
-            "title": "Sıcak Çikolata",
-            "description": "Sıcak ve kremalı çikolata."
-          },
-          "sahlep": {
-            "title": "Sahlep",
-            "description": "Kış aylarının favorisi sahlep."
-          },
-          "oralet": {
-            "title": "Oralet",
-            "description": "Toz halinde meyveli içecek."
-          },
-          "cinnamon": {
-            "title": "Tarçın",
-            "description": "Tarçınlı sıcak içecek."
-          },
-          "cappuccino": {
-            "title": "Cappuccino",
-            "description": "Sütlü köpüklü kahve."
-          },
-          "mocha": {
-            "title": "Mocha",
-            "description": "Çikolatalı kahve lezzeti."
-          },
-          "americano": {
-            "title": "Americano",
-            "description": "Sade ve hafif kahve."
-          },
-          "latte_macchiato": {
-            "title": "Latte Macchiato",
-            "description": "Sütlü ve köpüklü kahve."
-          },
-          "apa_colda": {
-            "title": "Apa Colda",
-            "description": "Soğuk özel kahve karışımı."
-          },
-          "milk_coffee": {
-            "title": "Sütlü Kahve",
-            "description": "Sütle hazırlanmış kahve."
-          }
-        }
-      }
-    },
-    "products": {
-      "title": "Ürünlerimiz",
-      "subtitle": "Geleneksel üretim yöntemleriyle, doğal ve kaliteli ürünlerimizi keşfedin",
-      "featuresLabel": "Özellikler",
-      "items": {
-        "olives": {
-          "title": "Premium Zeytin Çeşitleri",
-          "description": "Geleneksel yöntemlerle işlenmiş, doğal ve lezzetli zeytinlerimiz",
-          "features": [
-            "Doğal İşleme",
-            "Çeşitli Boyutlar",
-            "Taze Hasat",
-            "Geleneksel Tarif"
-          ]
-        },
-        "oil": {
-          "title": "Soğuk Sıkım Zeytinyağı",
-          "description": "Birinci sınıf soğuk sıkım zeytinyağı, doğal aroması ile",
-          "features": [
-            "Soğuk Sıkım",
-            "0.5 Asit Oranı",
-            "Doğal Aroma",
-            "Cam Şişe"
-          ]
-        },
-        "ceramics": {
-          "title": "El Yapımı Çini Ürünleri",
-          "description": "Ustalarımızın elinden çıkan özgün desenli çini sanat eserleri",
-          "features": [
-            "El Yapımı",
-            "Özgün Desen",
-            "Kaliteli Malzeme",
-            "Geleneksel Teknik"
-          ]
-        }
-      }
-    },
     "about": {
       "title": "AFTER•LIVE — Ritmi Yakala, Enerjiyi Hisset",
       "subtitle": "Gerçek bir gece, asla planlanmaz, yaşanır.",
@@ -471,72 +108,8 @@
         }
       }
     },
-    "gallery": {
-      "title": "Galeri"
-    },
     "contact": {
-      "title": "İletişim",
-      "subtitle": "Bizimle iletişime geçin, sorularınızı yanıtlayalım.",
-      "address": {
-        "title": "Adres",
-        "content": "Dutluca Yolu, Dutluca\nNo:253/1 Orhangazi̇/Bursa"
-      },
-      "hours": {
-        "title": "Çalışma Saatleri",
-        "content": "Pazartesi: Kapalı\nSalı - Pazar: 08:00 - 24:00"
-      },
-      "phone": {
-        "title": "Telefon",
-        "content": "+90 (532) 217 34 75"
-      },
-      "email": {
-        "title": "E-posta",
-        "content": "info@golbahce.com"
-      },
-      "ctaTitle": "Rezervasyon İçin",
-      "ctaSubtitle": "Bizi arayın veya doğrudan ziyaret edin"
-    },
-    "privacy": {
-      "title": "Gizlilik Politikası",
-      "intro": "Bu Gizlilik Politikası, Afterlive Göl Kenarı Kafesi web sitesini ziyaret ettiğinizde kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.",
-      "section1": {
-        "title": "1. Toplanan Bilgiler",
-        "content": "Web sitemizi ziyaret ettiğinizde ad, e-posta adresi, telefon numarası gibi kişisel bilgilerinizi yalnızca iletişim formları aracılığıyla siz sağladığınızda toplarız. Ayrıca çerezler ve benzeri teknolojilerle site kullanım bilgileri toplanabilir."
-      },
-      "section2": {
-        "title": "2. Bilgilerin Kullanımı",
-        "content": "Toplanan bilgiler yalnızca sizinle iletişime geçmek, hizmet kalitemizi artırmak ve site deneyiminizi geliştirmek amacıyla kullanılmaktadır."
-      },
-      "section3": {
-        "title": "3. Üçüncü Taraflarla Paylaşım",
-        "content": "Kişisel bilgileriniz yasal zorunluluklar dışında üçüncü şahıslarla paylaşılmaz. Hizmet sağlayıcılarımızla yalnızca gerekli durumlarda sınırlı erişim sağlanır."
-      },
-      "section4": {
-        "title": "4. Çerezler",
-        "content": "Sitemiz, kullanıcı deneyimini geliştirmek için çerezler kullanır. Tarayıcı ayarlarınızı değiştirerek çerezleri reddedebilir veya uyarı alabilirsiniz."
-      },
-      "section5": {
-        "title": "5. Güvenlik",
-        "content": "Kişisel bilgilerinizin güvenliği bizim için önemlidir. Bu bilgileri korumak için gerekli tüm teknik ve idari önlemleri alıyoruz."
-      },
-      "section6": {
-        "title": "6. İletişim",
-        "content": "Bu politika ile ilgili her türlü sorunuz için bizimle iletişime geçebilirsiniz: Dutluca Yolu, Orhangazi/Bursa | Telefon: +90 (532) 217 34 75"
-      },
-      "footer": "Afterlive Tesisleri. Tüm hakları saklıdır."
+      "title": "Merhaba"
     }
-  },
-
-  "allergens": {
-    "egg": "Yumurta",
-    "milk": "Süt",
-    "fish": "Balık",
-    "crustacean": "Kabuklu Deniz Ürünleri",
-    "peanut": "Yer Fıstığı",
-    "tree_nut": "Ağaç Yemişleri",
-    "soy": "Soya",
-    "gluten": "Gluten",
-    "sesame": "Susam",
-    "lactose": "Laktoz"
   }
 }

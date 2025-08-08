@@ -7,13 +7,15 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SocialButton } from "./components/SocialButton";
+import { useTranslate } from "../../hooks/useTranslation";
 export const Contact = () => {
+  const { translate } = useTranslate("pages.contact");
   return (
     <Grid container display={"flex"} justifyContent={"center"} p={5}>
       <Grid size={{ xs: 12, sm: 10, md: 6 }}>
         <Box mb={6}>
           <Typography component={"span"} variant="h1" fontWeight="bold">
-            Hello
+            {translate("title")}
           </Typography>
           <Typography
             component={"span"}

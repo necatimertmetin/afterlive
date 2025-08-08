@@ -10,8 +10,8 @@ const baseUrl = window.location.origin;
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
-  name: "Golbahce Tesisleri",
+  "@type": "App",
+  name: "Afterlive",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Dutluca Yolu 253/1",

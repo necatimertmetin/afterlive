@@ -40,8 +40,8 @@ const LightTheme = createTheme({
       paper: "#ffffff", // Kart zemin
     },
     text: {
-      primary: "#fff", // Koyu gri
-      secondary: "#fff", // Yardımcı yazılar
+      primary: "#000", // Koyu gri
+      secondary: "#111", // Yardımcı yazılar
     },
     customBackground: {
       box: "#FFF5F5", // Kırmızımsı açık kutu rengi

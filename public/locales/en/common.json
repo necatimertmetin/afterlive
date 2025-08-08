@@ -1,41 +1,25 @@
 {
   "seo": {
     "home": {
-      "title": "Home | Afterlive",
-      "desc": "Welcome to Afterlive restaurant. Delicious food and unique atmosphere await you.",
-      "ogTitle": "Afterlive Restaurant - Home",
-      "ogDesc": "Discover our delicious dishes prepared with the freshest ingredients."
+      "title": "Home | Afterlive"
     },
     "about": {
-      "title": "About Us | Afterlive",
-      "desc": "Learn about Afterlive's story, mission and vision.",
-      "ogTitle": "About Us - Afterlive",
-      "ogDesc": "The story of our flavors prepared with years of experience and passion."
+      "title": "About Us | Afterlive"
     },
     "contact": {
-      "title": "Contact | Afterlive",
-      "desc": "Contact Afterlive. Address, phone and reservation information.",
-      "ogTitle": "Contact - Afterlive",
-      "ogDesc": "Reach us, make reservations and ask your questions."
+      "title": "Contact | Afterlive"
     },
-    "products": {
-      "title": "Our Products | Afterlive",
-      "desc": "Learn about Afterlive's special products and flavors.",
-      "ogTitle": "Our Products - Afterlive",
-      "ogDesc": "Our special products prepared with carefully selected ingredients."
+    "live": {
+      "title": "Live | Afterlive"
     },
-    "menu": {
-      "title": "Menu | Afterlive",
-
-      "desc": "Afterlive menu - Main courses, appetizers, desserts and beverages.",
-      "ogTitle": "Menu - Afterlive",
-      "ogDesc": "Choose flavors that suit your taste from our rich menu."
+    "events": {
+      "title": "Events | Afterlive"
+    },
+    "blog": {
+      "title": "Blog | Afterlive"
     },
     "default": {
-      "title": "Afterlive Restaurant",
-      "desc": "Afterlive - Where taste and quality meet.",
-      "ogTitle": "Afterlive Restaurant",
-      "ogDesc": "Visit Afterlive for unique flavors and unforgettable experiences."
+      "title": "Afterlive"
     }
   },
   "layout": {
@@ -48,29 +32,16 @@
       "contact": "Contact"
     },
     "footer": {
-      "brand": "Afterlive Facilities",
-      "description": "Experience unforgettable moments with a lake view. Quality coffee, fresh flavors and warm atmosphere.",
+      "brand": "Afterlive",
       "quickLinks": {
         "title": "Quick Links",
         "home": "Home",
         "about": "About Us",
         "menu": "Menu",
-        "contact": "Contact",
         "live": "Live",
+        "contact": "Contact",
         "product": "Our Products",
         "gallery": "Gallery"
-      },
-      "workingHours": {
-        "title": "Working Hours",
-        "monday": "Monday",
-        "closed": "Closed",
-        "tueSun": "Tuesday-Sunday",
-        "hours": "08:00 - 24:00"
-      },
-      "contact": {
-        "title": "Contact",
-        "address": "Dutluca Road, Dutluca\nNo:253/1 Orhangazi/Bursa",
-        "phone": "+90 (532) 217 34 75"
       },
       "privacyPolicy": "Privacy Policy",
       "copyright": "© {{year}} Afterlive. The rhythm of the night is with you."
@@ -79,22 +50,25 @@
   "pages": {
     "home": {
       "hero": {
-        "title": "Start your day with a fresh breakfast by the lake!",
-        "menu": "Menu"
+        "title1": "Across Turkey",
+        "title2": "Keep the Pulse of Bars Alive",
+        "button": "WHAT'S ON NOW"
       },
       "ourStory": {
-        "title": "Our Story",
-        "description": "At Afterlive, we believe that a great coffee experience is about more than just brewing. It's the cozy atmosphere, warm hospitality, and delicious treats that accompany every sip. Our café is a sanctuary where you can escape the daily hustle, enjoy good company, aromatic coffee, and the simple pleasures of delightful pastries.",
-        "aboutUs": "About Us"
+        "title1": "It all started with that familiar question",
+        "title2": "'WHERE'S THE AFTER!?'",
+        "description1": "That question wasn't just curiosity — it was a culture, a need.",
+        "description2": "We chased that question through the nights.",
+        "description3": "And now the answer is here",
+
+        "slogan": "Catch the rhythm. Feel the energy. Live the night."
       },
       "whatWeHave": {
-        "title": "What We Offer",
-        "subtitle": "Our menu, prepared with the finest ingredients and a passion for flavor, offers enchanting coffee creations, freshly baked goods, and delicious snacks.",
-        "items": {
-          "gozleme": "Gözleme",
-          "kahvalti": "Breakfast",
-          "izgara": "Grill"
-        }
+        "title": "What does AFTERLIVE offer?",
+        "subtitle": "Afterlive beams you into the heart of music. You might be at home, but the night is always with you.",
+        "option1": "Live DJ performances",
+        "option2": "Real-time streams from venues",
+        "option3": "The rhythm of the night, on your screen"
       },
       "social": {
         "text": {
@@ -103,461 +77,39 @@
         }
       }
     },
-    "menu": {
-      "title": "Menu",
-      "price": "Price",
-      "extras": "Extras",
-      "contents": "Contents",
-      "breakfast": {
-        "title": "Breakfasts",
-        "description": "Plates that can't be finished for the most important meal of the day!! Big flavors…",
-        "items": {
-          "serpme_single": {
-            "title": "Turkish Breakfast (For One)",
-            "description": "Cheese (3 types), Greens Plate, Olives (2 types), Butter, Honey, Jam (2 types), Clotted Cream, Hot Plate (Fried Dough + Cigar Borek + French Fries), Early Harvest Olive Oil, Acuka - Walnut - Apricot",
-            "extras": {
-              "egg_with_pastirma": {
-                "title": "Egg with Pastrami",
-                "description": "Egg prepared with delicious pastrami."
-              },
-              "egg_with_sucuk": {
-                "title": "Egg with Turkish Sausage",
-                "description": "Delicious egg with Turkish sausage."
-              },
-              "menemen_varieties": {
-                "title": "Menemen Varieties",
-                "description": "Menemen made from fresh tomatoes, peppers, and eggs."
-              },
-              "omelet_varieties": {
-                "title": "Omelet Varieties",
-                "description": "Omelettes prepared with various ingredients."
-              },
-              "sucuk_plate": {
-                "title": "Turkish Sausage Plate",
-                "description": "Spicy Turkish sausage slices."
-              },
-              "sosis_plate": {
-                "title": "Sausage Plate",
-                "description": "Delicious sausage slices."
-              },
-              "chips_plate": {
-                "title": "Chips Plate",
-                "description": "Crispy potato chips."
-              },
-              "pisi_plate": {
-                "title": "Fried Dough Plate",
-                "description": "Fried dough pastry."
-              },
-              "sigara_boregi": {
-                "title": "Cigar Borek",
-                "description": "Thin borek rolls with filling."
-              },
-              "pacanga_boregi": {
-                "title": "Pastrami & Cheese Borek",
-                "description": "Borek with pastrami and cheese."
-              },
-              "kuymak": {
-                "title": "Kuymak",
-                "description": "Traditional dish also known as Mihlama."
-              },
-              "hellim": {
-                "title": "Halloumi",
-                "description": "Special dish prepared with Cypriot halloumi cheese."
-              }
-            }
-          },
-          "allergens": {
-            "egg": "Egg"
-          }
-        }
-      },
-      "toast": {
-        "title": "Toasts",
-        "description": "Not Simple, Legendary!",
-        "items": {
-          "karisik": {
-            "title": "Mixed",
-            "description": "Mixed toast with tomato, pepper, sausage, and cheese."
-          },
-          "kasarli": {
-            "title": "Cheese Toast",
-            "description": "Cheesy and crispy toast."
-          }
-        }
-      },
-      "gozleme": {
-        "title": "Gözlemes",
-        "description": "There's Love on the Griddle!",
-        "items": {
-          "peynirli": {
-            "title": "Cheese",
-            "description": "Gözleme stuffed with cheese."
-          },
-          "patatesli": {
-            "title": "Potato",
-            "description": "Gözleme with seasoned potatoes."
-          },
-          "kasarli": {
-            "title": "Kashar Cheese",
-            "description": "Gözleme with melted Kashar cheese."
-          }
-        }
-      },
-      "burger": {
-        "title": "Burgers",
-        "description": "The Irresistible Duo: Burger & Fries Love!",
-        "items": {
-          "burger_combo": {
-            "title": "Burger + Fries + Drink",
-            "description": "Tasty burger with fries and a drink."
-          },
-          "cig_borek": {
-            "title": "Fried Borek",
-            "description": "Classic fried borek flavor."
-          }
-        }
-      },
-      "pasta": {
-        "title": "Pastas",
-        "description": "Big Flavors with 3 Types of Pasta!",
-        "items": {
-          "bolonez": {
-            "title": "Bolognese Pasta + Drink",
-            "description": "Classic pasta with Bolognese sauce."
-          },
-          "penne": {
-            "title": "Penne Pasta + Drink",
-            "description": "Delicious penne pasta."
-          },
-          "manti": {
-            "title": "Turkish Ravioli (Mantı)",
-            "description": "Homemade ravioli with yogurt and sauce."
-          }
-        }
-      },
-      "grill": {
-        "title": "Grills",
-        "description": "Flavors That Met with Fire!",
-        "items": {
-          "kofte": {
-            "title": "Grilled meatballs + Salad + Fries",
-            "description": "Grilled meatballs with salad and fries."
-          },
-          "citir_tavuk": {
-            "title": "Crispy Chicken + Salad + Fries",
-            "description": "Crispy chicken served with salad and fries."
-          },
-          "sucuk": {
-            "title": "Turkish Sausage + Salad + Fries",
-            "description": "Grilled sausage served with salad and fries."
-          },
-          "tavuk_kanat": {
-            "title": "Chicken Wings + Salad + Fries",
-            "description": "Tasty wings with salad and fries."
-          }
-        }
-      },
-      "cold_drinks": {
-        "title": "Cold Drinks",
-        "description": "A Refreshing Sip of Coolness!",
-        "items": {
-          "mineral": {
-            "title": "Mineral Water",
-            "description": "Refreshing mineral water."
-          },
-          "fruit_mineral": {
-            "title": "Fruit-Flavored Mineral Water",
-            "description": "Mineral water with fruit flavor."
-          },
-          "cola_can": {
-            "title": "Cola Can",
-            "description": "Classic cola in a can."
-          },
-          "fanta_can": {
-            "title": "Fanta Can",
-            "description": "Fruity soda in a can."
-          },
-          "cola_bottle": {
-            "title": "Cola Bottle",
-            "description": "Cola in a glass bottle."
-          },
-          "uludag_gazoz": {
-            "title": "Uludag Soda",
-            "description": "Uludag brand soda."
-          },
-          "lemonade": {
-            "title": "Lemonade",
-            "description": "Homemade lemonade."
-          },
-          "ice_tea": {
-            "title": "Iced Tea",
-            "description": "Chilled iced tea."
-          },
-          "ayran": {
-            "title": "Ayran",
-            "description": "Yogurt-based refreshing drink."
-          },
-          "water": {
-            "title": "Water",
-            "description": "Natural spring water."
-          },
-          "fruit_juice": {
-            "title": "Fruit Juice",
-            "description": "Freshly squeezed fruit juice."
-          },
-          "frozen_varieties": {
-            "title": "Frozen Varieties",
-            "description": "Chilled frozen drinks."
-          },
-          "milkshake": {
-            "title": "Milkshake",
-            "description": "Creamy milk-based shake."
-          },
-          "iced_coffee": {
-            "title": "Iced Coffee",
-            "description": "Chilled iced coffee."
-          },
-          "churchill": {
-            "title": "Churchill",
-            "description": "Special coffee blend."
-          }
-        }
-      },
-      "hot_drinks": {
-        "title": "Hot Drinks",
-        "description": "Soothing Even with Its Steam!",
-        "items": {
-          "tea": {
-            "title": "Tea",
-            "description": "Classic black tea."
-          },
-          "turkish_coffee": {
-            "title": "Turkish Coffee",
-            "description": "Specially roasted Turkish coffee."
-          },
-          "nescafe": {
-            "title": "Nescafe",
-            "description": "Instant coffee."
-          },
-          "filter_coffee": {
-            "title": "Filter Coffee",
-            "description": "Rich flavored filter coffee."
-          },
-          "espresso": {
-            "title": "Espresso",
-            "description": "Strong flavored espresso."
-          },
-          "doppio": {
-            "title": "Doppio",
-            "description": "Double shot espresso."
-          },
-          "herbal_tea": {
-            "title": "Herbal Tea",
-            "description": "Soothing herbal tea varieties."
-          },
-          "hot_chocolate": {
-            "title": "Hot Chocolate",
-            "description": "Hot and creamy chocolate."
-          },
-          "sahlep": {
-            "title": "Sahlep",
-            "description": "Winter favorite sahlep drink."
-          },
-          "oralet": {
-            "title": "Oralet",
-            "description": "Powdered fruity drink."
-          },
-          "cinnamon": {
-            "title": "Cinnamon",
-            "description": "Hot cinnamon beverage."
-          },
-          "cappuccino": {
-            "title": "Cappuccino",
-            "description": "Frothy milk coffee."
-          },
-          "mocha": {
-            "title": "Mocha",
-            "description": "Chocolate flavored coffee."
-          },
-          "americano": {
-            "title": "Americano",
-            "description": "Light and plain coffee."
-          },
-          "latte_macchiato": {
-            "title": "Latte Macchiato",
-            "description": "Milky and frothy coffee."
-          },
-          "apa_colda": {
-            "title": "Apa Colda",
-            "description": "Special cold coffee blend."
-          },
-          "milk_coffee": {
-            "title": "Milk Coffee",
-            "description": "Coffee prepared with milk."
-          }
-        }
-      }
-    },
-    "products": {
-      "title": "Our Products",
-      "subtitle": "Discover our natural and quality products with traditional production methods",
-      "featuresLabel": "Features",
-      "items": {
-        "olives": {
-          "title": "Premium Olive Varieties",
-          "description": "Natural and delicious olives processed with traditional methods",
-          "features": [
-            "Natural Processing",
-            "Various Sizes",
-            "Fresh Harvest",
-            "Traditional Recipe"
-          ]
-        },
-        "oil": {
-          "title": "Cold Pressed Olive Oil",
-          "description": "First-class cold pressed olive oil with natural aroma",
-          "features": [
-            "Cold Pressed",
-            "0.5 Acid Ratio",
-            "Natural Aroma",
-            "Glass Bottle"
-          ]
-        },
-        "ceramics": {
-          "title": "Handmade Ceramic Products",
-          "description": "Unique patterned ceramic artworks from our craftsmen",
-          "features": [
-            "Handmade",
-            "Unique Design",
-            "Quality Material",
-            "Traditional Technique"
-          ]
-        }
-      }
-    },
     "about": {
-      "title": "About Us",
-      "subtitle": "Pleasure, Peace, Afterlive",
+      "title": "AFTER•LIVE — Catch the Rhythm, Feel the Energy",
+      "subtitle": "A true night is never planned, it’s lived.",
       "story": {
-        "title": "Who We Are?",
-        "paragraph1": "At Afterlive Facilities, our greatest goal is to offer our guests the comfort of their own home and the peace of their own garden. We exist to ensure that our guests enjoy pleasant and unforgettable moments with their loved ones, surrounded by nature and away from the city's hustle and bustle.",
-        "paragraph2": "Located in the beautiful corner of Orhangazi, by the clear shores of Lake İznik, under the cool shade of centuries-old olive trees, we provide a warm and safe environment where families can spend quality time together. Every detail in our facilities is carefully considered with an approach focused on taste, hygiene, and fruitful gain.",
-        "paragraph3": "With menus that appeal to our guests' tastes, a strong commitment to cleanliness, and sincere service, we aim to be the meeting point of peace and pleasure. While enjoying the soothing breeze of olive trees and the lake view, you will feel as if you are in your own garden at home.",
-        "paragraph4": "At Afterlive Facilities, on the path we started with our slogan 'Pleasure, Peace, Afterlive,' we are delighted to host you, our valued guests. We invite you to experience joyful moments in a family atmosphere, immersed in nature.",
-        "imageAlt": "General View of Afterlive Facilities"
+        "title": "Our Story",
+        "paragraph1": "It all began with that familiar question: \"Where’s the after?\" It wasn’t just a simple curiosity — it was an essential part of nightlife.",
+        "paragraph2": "The knowledge I learned about security camera systems back in high school blended with the energy of the nights. The first sketches I scribbled in Paint slowly began to come to life after an accident and a long recovery period.",
+        "paragraph3": "Job listings like “looking for a developer” on sahibinden.com, networking with familiar faces, test broadcasts, and a team that never gave up...",
+        "paragraph4": "Because we know this: A true night is never planned, it’s lived.",
+        "imageAlt": "AFTER•LIVE Team"
       },
-      "statsTitle": "Afterlive by the Numbers",
-      "stats": {
-        "experience": {
-          "number": "15+",
-          "label": "Years of Experience"
-        },
-        "guests": {
-          "number": "50K+",
-          "label": "Happy Guests"
-        },
-        "activities": {
-          "number": "25",
-          "label": "Different Activities"
-        },
-        "awards": {
-          "number": "12",
-          "label": "Awards & Certificates"
-        }
-      },
-      "featuresTitle": "Our Features",
+      "featuresTitle": "Why AFTER•LIVE?",
       "features": {
-        "nature": {
-          "title": "Natural Beauty",
-          "description": "A peaceful environment surrounded by greenery and nature"
+        "live": {
+          "title": "Real-Time Streaming",
+          "description": "Feel the venue’s energy instantly, experience the night from afar."
         },
-        "family": {
-          "title": "Family Friendly",
-          "description": "Specially designed areas for guests of all ages"
+        "dj": {
+          "title": "DJ Performances",
+          "description": "Live music streams for the moments you don't want to miss."
         },
-        "kitchen": {
-          "title": "Delicious Cuisine",
-          "description": "Our special menu where traditional and modern flavors meet"
+        "community": {
+          "title": "Community and Connection",
+          "description": "Where's the after? Now, everyone has the answer."
         },
-        "garden": {
-          "title": "Olive Garden",
-          "description": "Our natural garden where you can find peace among centuries-old olive trees."
-        },
-        "pool": {
-          "title": "Lake Swimming",
-          "description": "Our guests can enjoy swimming and cooling off in Lake İznik."
-        },
-        "spa": {
-          "title": "Relaxation Areas",
-          "description": "Special relaxation zones to relieve stress and unwind"
+        "vision": {
+          "title": "Live the Techno Spirit",
+          "description": "Unite Turkey’s nightlife culture on a single platform."
         }
       }
-    },
-    "gallery": {
-      "title": "Gallery"
     },
     "contact": {
-      "title": "Contact",
-      "subtitle": "Get in touch with us, we are ready to answer your questions.",
-      "address": {
-        "title": "Address",
-        "content": "Dutluca Road, Dutluca\nNo:253/1 Orhangazi/Bursa"
-      },
-      "hours": {
-        "title": "Working Hours",
-        "content": "Monday: Closed\nTuesday - Sunday: 08:00 - 24:00"
-      },
-      "phone": {
-        "title": "Phone",
-        "content": "+90 (532) 217 34 75"
-      },
-      "email": {
-        "title": "Email",
-        "content": "info@golbahce.com"
-      },
-      "ctaTitle": "For Reservations",
-      "ctaSubtitle": "Call us or visit directly"
-    },
-    "privacy": {
-      "title": "Privacy Policy",
-      "intro": "This Privacy Policy explains how personal data is collected, used, and protected when you visit the Afterlive Lakeside Cafe website.",
-      "section1": {
-        "title": "1. Information Collected",
-        "content": "When you visit our website, we collect personal information such as name, email address, and phone number only when you provide it through contact forms. Additionally, site usage information may be collected through cookies and similar technologies."
-      },
-      "section2": {
-        "title": "2. Use of Information",
-        "content": "The collected information is used solely for contacting you, improving our service quality, and enhancing your site experience."
-      },
-      "section3": {
-        "title": "3. Sharing with Third Parties",
-        "content": "Your personal information is not shared with third parties except for legal obligations. Limited access is provided to our service providers only when necessary."
-      },
-      "section4": {
-        "title": "4. Cookies",
-        "content": "Our site uses cookies to improve user experience. You can reject cookies or receive warnings by changing your browser settings."
-      },
-      "section5": {
-        "title": "5. Security",
-        "content": "The security of your personal information is important to us. We take all necessary technical and administrative measures to protect this information."
-      },
-      "section6": {
-        "title": "6. Contact",
-        "content": "For any questions regarding this policy, you can contact us: Dutluca Road, Orhangazi/Bursa | Phone: +90 (532) 217 34 75"
-      },
-      "footer": "Afterlive Facilities. All rights reserved."
+      "title": "Hello"
     }
-  },
-  "allergens": {
-    "egg": "Egg",
-    "milk": "Milk",
-    "fish": "Fish",
-    "crustacean": "Crustacean",
-    "peanut": "Peanut",
-    "tree_nut": "Tree Nuts",
-    "soy": "Soy",
-    "gluten": "Gluten",
-    "sesame": "Sesame",
-    "lactose": "Lactose"
   }
 }

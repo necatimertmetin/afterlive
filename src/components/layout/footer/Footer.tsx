@@ -8,30 +8,46 @@ export const Footer = () => {
       component="footer"
       p={5}
       sx={{
+        position: "relative",
         borderTop: "5px solid #ff0000",
+        overflow: "hidden",
       }}
     >
+      <Box
+        sx={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          top: 0,
+          left: 0,
+          zIndex: 10,
+          backgroundImage: "radial-gradient(circle, black 1px, #33333311 1px)",
+          backgroundSize: "5px 5px",
+          opacity: 1,
+          pointerEvents: "none", // kullanıcı etkileşimini engelle
+        }}
+      />
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <img src={logo} />
+          <img src={logo} height={"256px"} />
         </Grid>
 
         {/* Hızlı Linkler */}
         <Grid size={{ xs: 12, md: 4 }} mb={10}>
           <Stack spacing={1}>
             <Link href="/" color="inherit" underline="hover">
-              <Typography variant="h1" fontWeight={"bold"}>
+              <Typography variant="h2" fontWeight={"bold"}>
                 {translate("quickLinks.home")}
               </Typography>
             </Link>
             <Link href="/live" color="inherit" underline="hover">
-              <Typography variant="h1" fontWeight={"bold"}>
+              <Typography variant="h2" fontWeight={"bold"}>
                 {translate("quickLinks.live")}
               </Typography>
             </Link>
 
             <Link href="/contact" color="inherit" underline="hover">
-              <Typography variant="h1" fontWeight={"bold"}>
+              <Typography variant="h2" fontWeight={"bold"}>
                 {translate("quickLinks.contact")}
               </Typography>
             </Link>

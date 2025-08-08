@@ -60,7 +60,7 @@ export const Header = () => {
   return (
     <AppBar
       position="relative"
-      sx={{ backgroundColor: "#00000088" }}
+      sx={{ backgroundColor: theme.palette.background.default }}
       elevation={0}
     >
       <Container maxWidth="lg">
