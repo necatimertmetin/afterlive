@@ -1,5 +1,4 @@
 import type { JSX } from "react";
-import { About } from "../pages/about/About";
 import { Contact } from "../pages/contact/Contact";
 import { PrivacyPolicy } from "../pages/privacy/PrivacyPolicy";
 import { Home } from "../pages/home/Home";
@@ -31,7 +30,7 @@ export const ROUTES: AppRoute[] = [
   },
   {
     path: "/about",
-    element: <About />,
+    element: <Live />,
     labelKey: "events",
     showInMenu: true,
     showInFooter: true,
@@ -39,15 +38,8 @@ export const ROUTES: AppRoute[] = [
 
   {
     path: "/about",
-    element: <About />,
+    element: <Live />,
     labelKey: "blog",
-    showInMenu: true,
-    showInFooter: true,
-  },
-  {
-    path: "/about",
-    element: <About />,
-    labelKey: "about",
     showInMenu: true,
     showInFooter: true,
   },
