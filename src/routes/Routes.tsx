@@ -29,7 +29,7 @@ export const ROUTES: AppRoute[] = [
     showInFooter: true,
   },
   {
-    path: "/about",
+    path: "/live",
     element: <Live />,
     labelKey: "events",
     showInMenu: true,
@@ -37,7 +37,7 @@ export const ROUTES: AppRoute[] = [
   },
 
   {
-    path: "/about",
+    path: "/live",
     element: <Live />,
     labelKey: "blog",
     showInMenu: true,
