@@ -61,19 +61,23 @@ export const Stories = ({ stories, onSelect }: StoriesProps) => {
                 width: storySize,
                 height: storySize,
                 borderRadius: "50%",
-                backgroundColor: story.color,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 overflow: "hidden",
-                flexShrink: 0,
-                border: isSelected ? "4px solid #04C8C8" : "3px solid white",
+                position: "relative",
+                padding: "3px",
+                background: isSelected
+                  ? "linear-gradient(45deg, #ff4d4f, #ff9f43, #ff4d4f)"
+                  : "linear-gradient(45deg, #ccc, #eee)",
+                backgroundSize: "200% 200%",
+                animation: isSelected
+                  ? "gradientAnim 3s ease infinite"
+                  : "none",
                 boxShadow: isSelected
-                  ? "0 0 12px rgba(0, 200, 200, 0.6)"
-                  : "0 0 6px rgba(0,0,0,0.2)",
-                transition: "all 0.2s ease-in-out",
+                  ? "0 0 15px rgba(255,77,79,0.7)"
+                  : "0 0 5px rgba(0,0,0,0.3)",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 "&:hover": {
-                  transform: "scale(1.05)",
+                  transform: "scale(1.08)",
+                  boxShadow: "0 0 20px rgba(255,77,79,0.9)",
                 },
               }}
             >
@@ -83,6 +87,7 @@ export const Stories = ({ stories, onSelect }: StoriesProps) => {
                 style={{ width: "100%" }}
               />
             </Box>
+
             <Typography textAlign="center" mt={1}>
               {story.label}
             </Typography>
