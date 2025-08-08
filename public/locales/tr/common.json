@@ -109,7 +109,8 @@
       }
     },
     "contact": {
-      "title": "Merhaba"
+      "title": "Merhaba",
+      "send": "Gönder"
     }
   }
 }

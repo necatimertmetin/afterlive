@@ -52,7 +52,9 @@ export const Contact = () => {
                   variant="contained"
                   color="primary"
                 >
-                  <Typography fontWeight={"bold"}>Gönder</Typography>
+                  <Typography fontWeight={"bold"}>
+                    {translate("send")}
+                  </Typography>
                 </Button>
               </Stack>
             </Stack>

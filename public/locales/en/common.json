@@ -109,7 +109,8 @@
       }
     },
     "contact": {
-      "title": "Hello"
+      "title": "Hello",
+      "send": "Send"
     }
   }
 }
