@@ -1,0 +1,116 @@
+{
+  "seo": {
+    "home": {
+      "title": "Home | Afterlive"
+    },
+    "about": {
+      "title": "About Us | Afterlive"
+    },
+    "contact": {
+      "title": "Contact | Afterlive"
+    },
+    "live": {
+      "title": "Live | Afterlive"
+    },
+    "events": {
+      "title": "Events | Afterlive"
+    },
+    "blog": {
+      "title": "Blog | Afterlive"
+    },
+    "default": {
+      "title": "Afterlive"
+    }
+  },
+  "layout": {
+    "header": {
+      "home": "Home",
+      "live": "Live",
+      "events": "Events",
+      "blog": "Blog",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "footer": {
+      "brand": "Afterlive",
+      "quickLinks": {
+        "title": "Quick Links",
+        "home": "Home",
+        "about": "About Us",
+        "menu": "Menu",
+        "live": "Live",
+        "contact": "Contact",
+        "product": "Our Products",
+        "gallery": "Gallery"
+      },
+      "privacyPolicy": "Privacy Policy",
+      "copyright": "© {{year}} Afterlive. The rhythm of the night is with you."
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title1": "Across Turkey",
+        "title2": "Keep the Pulse of Bars Alive",
+        "button": "WHAT'S ON NOW"
+      },
+      "ourStory": {
+        "title1": "It all started with that familiar question",
+        "title2": "'WHERE'S THE AFTER!?'",
+        "description1": "That question wasn't just curiosity — it was a culture, a need.",
+        "description2": "We chased that question through the nights.",
+        "description3": "And now the answer is here",
+
+        "slogan": "Catch the rhythm. Feel the energy. Live the night."
+      },
+      "whatWeHave": {
+        "title": "What does AFTERLIVE offer?",
+        "subtitle": "Afterlive beams you into the heart of music. You might be at home, but the night is always with you.",
+        "option1": "Live DJ performances",
+        "option2": "Real-time streams from venues",
+        "option3": "The rhythm of the night, on your screen"
+      },
+      "social": {
+        "text": {
+          "prefix": "Share your experiences",
+          "suffix": "with us"
+        }
+      }
+    },
+    "about": {
+      "title": "AFTER•LIVE — Catch the Rhythm, Feel the Energy",
+      "subtitle": "A true night is never planned, it’s lived.",
+      "story": {
+        "title": "Our Story",
+        "paragraph1": "It all began with that familiar question: \"Where’s the after?\" It wasn’t just a simple curiosity — it was an essential part of nightlife.",
+        "paragraph2": "The knowledge I learned about security camera systems back in high school blended with the energy of the nights. The first sketches I scribbled in Paint slowly began to come to life after an accident and a long recovery period.",
+        "paragraph3": "Job listings like “looking for a developer” on sahibinden.com, networking with familiar faces, test broadcasts, and a team that never gave up...",
+        "paragraph4": "Because we know this: A true night is never planned, it’s lived.",
+        "imageAlt": "AFTER•LIVE Team"
+      },
+      "featuresTitle": "Why AFTER•LIVE?",
+      "features": {
+        "live": {
+          "title": "Real-Time Streaming",
+          "description": "Feel the venue’s energy instantly, experience the night from afar."
+        },
+        "dj": {
+          "title": "DJ Performances",
+          "description": "Live music streams for the moments you don't want to miss."
+        },
+        "community": {
+          "title": "Community and Connection",
+          "description": "Where's the after? Now, everyone has the answer."
+        },
+        "vision": {
+          "title": "Live the Techno Spirit",
+          "description": "Unite Turkey’s nightlife culture on a single platform."
+        }
+      }
+    },
+    "contact": {
+      "title": "Hello",
+      "send": "Send"
+    }
+  }
+}

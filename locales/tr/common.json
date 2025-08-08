@@ -1,0 +1,116 @@
+{
+  "seo": {
+    "home": {
+      "title": "Ana Sayfa | Afterlive"
+    },
+    "about": {
+      "title": "Hakkımızda | Afterlive"
+    },
+    "contact": {
+      "title": "İletişim | Afterlive"
+    },
+    "live": {
+      "title": "Canlı | Afterlive"
+    },
+    "events": {
+      "title": "Etkinklikler | Afterlive"
+    },
+    "blog": {
+      "title": "Blog | Afterlive"
+    },
+    "default": {
+      "title": "Afterlive"
+    }
+  },
+  "layout": {
+    "header": {
+      "home": "ANASAYFA",
+      "live": "CANLı",
+      "events": "ETKİNLİKLER",
+      "blog": "BLOG",
+      "about": "HAKKIMIZDA",
+      "contact": "İLETİŞİM"
+    },
+    "footer": {
+      "brand": "Afterlive",
+      "quickLinks": {
+        "title": "Hızlı Linkler",
+        "home": "Ana Sayfa",
+        "about": "Hakkımızda",
+        "menu": "Menü",
+        "live": "Canlı",
+        "contact": "İletişim",
+        "product": "Ürünlerimiz",
+        "gallery": "Galeri"
+      },
+      "privacyPolicy": "Gizlilik Politikası",
+      "copyright": "© {{year}} Afterlive. Gecenin ritmi seninle."
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title1": "Tüm Türkiyede",
+        "title2": "Barların Nabzını Canlı Tutun",
+        "button": "ŞU ANDA NELER VAR"
+      },
+      "ourStory": {
+        "title1": "Her şey o tanıdık soruyla başladı",
+        "title2": "'AFTER NEREDE!?'",
+        "description1": "Bu soru, sadece bir merak değil — bir kültür, bir ihtiyaçtı.",
+        "description2": "Biz o gecelerde, bu sorunun peşine düştük.",
+        "description3": "Ve şimdi cevabı burada",
+
+        "slogan": "Ritmi yakala. Enerjiyi hisset. Geceyi yaşa."
+      },
+      "whatWeHave": {
+        "title": "AFTERLIVE da neler var?",
+        "subtitle": "Afterlive, seni müziğin kalbine ışınlar. Evde olabilirsin ama gece hep seninle.",
+        "option1": "Canlı DJ performansları",
+        "option2": "Mekanlardan gerçek zamanlı yayın",
+        "option3": "Gecenin ritmi, ekranında"
+      },
+      "social": {
+        "text": {
+          "prefix": "Deneyimlerinizi",
+          "suffix": "ile paylaşın"
+        }
+      }
+    },
+    "about": {
+      "title": "AFTER•LIVE — Ritmi Yakala, Enerjiyi Hisset",
+      "subtitle": "Gerçek bir gece, asla planlanmaz, yaşanır.",
+      "story": {
+        "title": "Hikayemiz",
+        "paragraph1": "Her şey o tanıdık soruyla başladı: \"After nerede?\" Bu sadece basit bir merak değil, gece hayatının olmazsa olmaz bir parçasıydı.",
+        "paragraph2": "Lisede öğrendiğim güvenlik kamerası sistemleri bilgisi, gecelerin enerjisiyle birleşti. Paint'te karaladığım ilk taslaklar, bir kaza ve uzun bir iyileşme sürecinden sonra gerçeğe dönüşmeye başladı.",
+        "paragraph3": "Sahibinden.com'da \"yazılımcı aranıyor\" ilanları, tanıdık tanıdık kurulan network, test yayınları ve pes etmeyen bir ekip...",
+        "paragraph4": "Çünkü biz biliyoruz ki: Gerçek bir gece, asla planlanmaz, yaşanır.",
+        "imageAlt": "AFTER•LIVE Ekibi"
+      },
+      "featuresTitle": "Neden AFTER•LIVE?",
+      "features": {
+        "live": {
+          "title": "Gerçek Zamanlı Yayın",
+          "description": "Mekanların enerjisini anlık olarak hisset, geceyi uzaktan yaşa."
+        },
+        "dj": {
+          "title": "DJ Performansları",
+          "description": "Kaçırmak istemediğin anlar için canlı müzik yayınları."
+        },
+        "community": {
+          "title": "Topluluk ve Bağlantı",
+          "description": "After nerede? Artık herkesin cevabı var."
+        },
+        "vision": {
+          "title": "Tekno Ruhunu Yaşat",
+          "description": "Türkiye'nin gece kültürünü tek bir platformda birleştir."
+        }
+      }
+    },
+    "contact": {
+      "title": "Merhaba",
+      "send": "Gönder"
+    }
+  }
+}
