@@ -39,7 +39,7 @@ function AppContent() {
   return (
     <CacheProvider value={cache}>
       <CssBaseline />
-      <BrowserRouter>
+      <BrowserRouter basename="/afterlife">
         <Routes>
           <Route element={<PageLayout />}>
             {ROUTES.map((route) => (
