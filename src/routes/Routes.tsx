@@ -37,14 +37,6 @@ export const ROUTES: AppRoute[] = [
     showInMenu: true,
     showInFooter: true,
   },
-
-  {
-    path: "/live",
-    element: <Live />,
-    labelKey: "blog",
-    showInMenu: true,
-    showInFooter: true,
-  },
   {
     path: "/events",
     element: <Events />,
