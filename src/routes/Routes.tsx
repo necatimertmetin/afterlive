@@ -4,6 +4,7 @@ import { PrivacyPolicy } from "../pages/privacy/PrivacyPolicy";
 import { Home } from "../pages/home/Home";
 import { Live } from "../pages/live/Live";
 import { Live2 } from "../pages/live2/Live2";
+import { Events } from "../pages/events/Events";
 
 export type AppRoute = {
   path: string;
@@ -44,7 +45,13 @@ export const ROUTES: AppRoute[] = [
     showInMenu: true,
     showInFooter: true,
   },
-
+  {
+    path: "/events",
+    element: <Events />,
+    labelKey: "events",
+    showInMenu: true,
+    showInFooter: true,
+  },
   {
     path: "/contact",
     element: <Contact />,
