@@ -48,7 +48,6 @@ export const EventCard = ({
           overflow: "hidden",
           zIndex: 1,
           filter: "invert(100%) grayscale(1)",
-          pointerEvents: "none",
         }}
       >
         <iframe
