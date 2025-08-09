@@ -33,7 +33,7 @@ export const ROUTES: AppRoute[] = [
   {
     path: "/live2",
     element: <Live2 />,
-    labelKey: "events",
+    labelKey: "live",
     showInMenu: true,
     showInFooter: true,
   },
