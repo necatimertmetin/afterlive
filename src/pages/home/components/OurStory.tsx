@@ -34,7 +34,7 @@ export const OurStory = () => {
         >
           {translate("title1")}
         </Typography>
-        <Typography variant="h3" color="error">
+        <Typography variant="h3" color="primary" fontWeight={600}>
           {translate("title2")}
         </Typography>
         <Typography variant="h5">
