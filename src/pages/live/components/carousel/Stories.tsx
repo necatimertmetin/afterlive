@@ -14,8 +14,6 @@ type StoriesProps = {
 };
 
 export const Stories = ({ stories, onSelect }: StoriesProps) => {
-  const storySize = 96;
-
   const handleClick = (id: number) => {
     onSelect(id);
   };
@@ -25,10 +23,13 @@ export const Stories = ({ stories, onSelect }: StoriesProps) => {
     infinite: true,
     speed: 300,
     centerMode: true,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     swipeToSlide: true,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    cssEase: "linear",
   };
 
   return (
@@ -47,14 +48,16 @@ export const Stories = ({ stories, onSelect }: StoriesProps) => {
         >
           <Box
             sx={{
-              width: storySize,
-              height: storySize,
-              borderRadius: "50%",
+              width: 196,
+              height: 196,
+              borderRadius: "50px",
               border: "3px solid red",
-              overflow: "hidden",
               position: "relative",
-              padding: "3px",
               backgroundSize: "200% 200%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
               "&:hover": {
                 boxShadow: "0 0 20px #ff0000",
               },
@@ -63,7 +66,10 @@ export const Stories = ({ stories, onSelect }: StoriesProps) => {
             <img
               src={story.image}
               alt={story.label}
-              style={{ width: "100%" }}
+              style={{
+                height: "100%", // yüksekliği sabit tut
+                width: "auto", // oranı koru
+              }}
             />
           </Box>
 
