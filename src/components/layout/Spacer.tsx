@@ -23,7 +23,8 @@ export const Spacer = ({ imageUrl }: SpacerProps) => {
           content: '""',
           position: "absolute",
           inset: 0,
-          background: "rgba(0,0,0,0.6)",
+          background: "rgba(0,0,0,0.75)",
+          zIndex: 1,
         },
       }}
     >
@@ -31,42 +32,67 @@ export const Spacer = ({ imageUrl }: SpacerProps) => {
         sx={{
           position: "relative",
           zIndex: 2,
-          background: "rgba(0,0,0,0.6)",
+          px: { xs: 4, md: 10 },
+          py: { xs: 5, md: 8 },
+          borderRadius: "16px",
           border: "2px solid #ff0000",
-          borderRadius: "20px",
-          padding: "40px 80px",
+          boxShadow: "0 0 15px #ff0000",
+          backdropFilter: "none",
+          background: "transparent",
           textAlign: "center",
-          boxShadow: "0 0 30px rgba(255,0,0,0.5)",
-          backdropFilter: "blur(6px)",
-          animation: "fadeInUp 1s ease-out",
-          "@keyframes fadeInUp": {
-            "0%": { opacity: 0, transform: "translateY(40px)" },
-            "100%": { opacity: 1, transform: "translateY(0)" },
+          cursor: "default",
+          transition: "box-shadow 0.4s ease",
+          "&:hover": {
+            boxShadow:
+              "0 0 25px 4px rgba(255,0,0,0.8), 0 0 40px 6px rgba(255,0,0,0.6)",
           },
         }}
       >
         <Typography
-          variant="h3"
+          variant="h2"
           sx={{
-            fontWeight: 900,
-            color: "#ff0000",
-            letterSpacing: "2px",
-            mb: 2,
+            fontWeight: 300,
+            color: "#fff",
+            letterSpacing: "4px",
+            mb: 3,
+            textTransform: "uppercase",
+            userSelect: "none",
+            fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
           }}
         >
           {translate("slogan")}
         </Typography>
 
         <Typography
-          variant="h6"
+          variant="h5"
           sx={{
             color: "#ff0000",
-            opacity: 0.8,
             fontWeight: 500,
+            fontStyle: "normal",
+            userSelect: "none",
+            letterSpacing: 1,
           }}
         >
           {translate("subtitle")}
         </Typography>
+
+        <Box
+          sx={{
+            mt: 6,
+            mx: "auto",
+            height: 3,
+            width: 80,
+            borderRadius: 2,
+            background:
+              "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,0.6) 50%, rgba(255,0,0,1) 100%)",
+            boxShadow: "0 0 12px 4px rgba(255,0,0,0.7)",
+            animation: "neonPulse 2.5s ease-in-out infinite",
+            "@keyframes neonPulse": {
+              "0%, 100%": { opacity: 1 },
+              "50%": { opacity: 0.6 },
+            },
+          }}
+        />
       </Box>
     </Stack>
   );
