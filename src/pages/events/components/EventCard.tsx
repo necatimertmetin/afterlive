@@ -23,12 +23,12 @@ export const EventCard = ({
 
   return (
     <Paper
+      variant="outlined"
       sx={{
         borderRadius: "20px",
         width: "100%",
         maxWidth: 280,
         overflow: "hidden",
-        boxShadow: "0px 0px 3px 2px red",
         position: "relative",
         cursor: "pointer",
         backgroundColor: "background.paper",
@@ -98,7 +98,7 @@ export const EventCard = ({
           width: "100%",
           aspectRatio: "16 / 9",
           objectFit: "cover",
-          boxShadow: "0px 2px 3px red",
+
           display: "block",
           position: "relative",
           zIndex: 5,

@@ -18,7 +18,7 @@ export const Live2 = () => {
       <Stack direction={"row"} justifyContent={"center"} alignItems={"center"}>
         <Box
           sx={{
-            border: "2px solid red",
+            borderRight: "2px solid red",
             height: "480px",
             width: "853px",
             position: "relative",
@@ -31,25 +31,9 @@ export const Live2 = () => {
             spacing={0.5}
             sx={{ ml: 1, mt: 1, position: "absolute" }}
           >
-            <Stack
-              direction={"row"}
-              alignItems={"center"}
-              justifyContent={"center"}
-              sx={{
-                p: 0.4,
-                border: "2px solid red",
-                borderRadius: "50%",
-              }}
-            >
-              <Box
-                sx={{
-                  height: "16px",
-                  width: "16px",
-                  background: " red",
-                  borderRadius: "50%",
-                }}
-              ></Box>
-            </Stack>
+            <Typography color="primary" variant="h6">
+              ◉
+            </Typography>
             <Typography variant="body2" fontWeight={600}>
               LIVE
             </Typography>
@@ -61,9 +45,7 @@ export const Live2 = () => {
             width={"100%"}
           />
         </Box>
-        <Stack
-          sx={{ border: "2px solid red", height: "480px", width: "256px" }}
-        >
+        <Stack sx={{ height: "480px", width: "256px" }}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1301562970202!2d27.115552562489405!3d38.45222019675594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd9b9fef5d507%3A0xf368a789a9dce0b9!2sDurock!5e0!3m2!1str!2sus!4v1754737583019!5m2!1str!2sus"
             width="100%"
