@@ -22,7 +22,7 @@ export const Footer = () => {
           left: 0,
           zIndex: 10,
           backgroundImage: "radial-gradient(circle, black 1px, #33333311 1px)",
-          backgroundSize: "5px 5px",
+          backgroundSize: ".5rem .5rem",
           opacity: 1,
           pointerEvents: "none", // kullanıcı etkileşimini engelle
         }}
