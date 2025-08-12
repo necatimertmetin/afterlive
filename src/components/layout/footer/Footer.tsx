@@ -22,14 +22,18 @@ export const Footer = () => {
           left: 0,
           zIndex: 10,
           backgroundImage: "radial-gradient(circle, black 1px, #33333311 1px)",
-          backgroundSize: ".5rem .5rem",
+          backgroundSize: ".2rem .2rem",
           opacity: 1,
           pointerEvents: "none", // kullanıcı etkileşimini engelle
         }}
       />
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <img src={logo} height={"256px"} />
+          <img
+            src={logo}
+            height={"256px"}
+            style={{ opacity: 0.4, transform: "rotate(-5deg)" }}
+          />
         </Grid>
 
         {/* Hızlı Linkler */}
