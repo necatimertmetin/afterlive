@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useState } from "react";
-import { Stories } from "../live/components/carousel/Stories";
-import { mockData } from "../live/components/data";
+import { Stories } from "./components/carousel/Stories";
+import { mockData } from "./components/data";
 
 export const Live2 = () => {
   const [selectedId, setSelectedId] = useState(0);
