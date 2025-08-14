@@ -33,7 +33,7 @@ export const Live = () => {
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <Grid container size={{ xs: 12, md: 9 }}>
+        <Grid container size={{ xs: 12, md: 7 }}>
           <Grid
             size={{ xs: 12, md: 8 }}
             display={"flex"}
@@ -65,7 +65,7 @@ export const Live = () => {
                 height="auto"
                 controls
                 style={{
-                  borderRadius: "12px",
+                  borderRadius: "50px",
                   boxShadow: "0 0 25px rgba(0,0,0,0.3)",
                 }}
               >
@@ -76,11 +76,11 @@ export const Live = () => {
           </Grid>
 
           {/* Sağ Panel */}
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid size={{ xs: 12, md: 3.5 }}>
             {/* Lokasyon Görseli */}
             <Box
               sx={{
-                borderRadius: "12px",
+                borderRadius: "50px",
                 overflow: "hidden",
                 mb: 2,
                 position: "relative",
@@ -99,18 +99,16 @@ export const Live = () => {
                   color: "white",
                   px: 1,
                   py: 0.3,
-                  borderRadius: "6px",
+                  borderRadius: "12px",
                   fontSize: "0.8rem",
                 }}
               >
                 {selected.label}
               </Typography>
             </Box>
-
-            {/* Ek Görsel */}
             <Box
               sx={{
-                borderRadius: "12px",
+                borderRadius: "50px",
                 overflow: "hidden",
                 "& img": { width: "100%", display: "block" },
                 "&:hover": { transform: "scale(1.02)" },
