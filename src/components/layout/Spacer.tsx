@@ -1,12 +1,32 @@
 import { Stack, Typography, Box } from "@mui/material";
 import { useTranslate } from "../../hooks/useTranslation";
+import LocalBarIcon from "@mui/icons-material/LocalBar";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import LocalActivityIcon from "@mui/icons-material/LocalActivity";
 
 type SpacerProps = {
   imageUrl: string;
 };
 
 export const Spacer = ({ imageUrl }: SpacerProps) => {
-  const { translate } = useTranslate("pages.home.ourStory");
+  useTranslate("pages.home.ourStory");
+  const liveBars = 8;
+  const comingSoon = 5;
+  const events = 12;
+  const stats = [
+    {
+      icon: <LocalBarIcon sx={{ color: "#ff0000", fontSize: 30 }} />,
+      text: `${liveBars} BAR YAYINDA`,
+    },
+    {
+      icon: <LocalActivityIcon sx={{ color: "#ff0000", fontSize: 30 }} />,
+      text: `${events} ETKİNLİK HER HAFTA`,
+    },
+    {
+      icon: <AccessTimeIcon sx={{ color: "#ff0000", fontSize: 30 }} />,
+      text: `${comingSoon} MEKAN YAKINDA`,
+    },
+  ];
 
   return (
     <Stack
@@ -30,69 +50,63 @@ export const Spacer = ({ imageUrl }: SpacerProps) => {
     >
       <Box
         sx={{
-          position: "relative",
-          zIndex: 2,
-          px: { xs: 4, md: 10 },
           py: { xs: 5, md: 8 },
-          borderRadius: "16px",
-          border: "2px solid #ff0000",
-          boxShadow: "0 0 15px #ff0000",
-          backdropFilter: "none",
-          background: "transparent",
-          textAlign: "center",
-          cursor: "default",
-          transition: "box-shadow 0.4s ease",
-          "&:hover": {
-            boxShadow:
-              "0 0 25px 4px rgba(255,0,0,0.8), 0 0 40px 6px rgba(255,0,0,0.6)",
-          },
+          px: { xs: 3, md: 6 },
+          minHeight: "40vh",
+          position: "relative", // overlay üstünde durması için
+          zIndex: 2,
+          color: "#fff", // yazı rengini net beyaz yap
         }}
       >
         <Typography
-          variant="h2"
-          sx={{
-            fontWeight: 300,
-            color: "#fff",
-            letterSpacing: "4px",
-            mb: 3,
-            textTransform: "uppercase",
-            userSelect: "none",
-            fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-          }}
+          variant="h3"
+          fontWeight={900}
+          textAlign="center"
+          mb={4}
+          sx={{ letterSpacing: 2 }}
         >
-          {translate("slogan")}
+          ŞU AN İZMİR'DE
         </Typography>
+
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: 3, md: 6 }}
+          justifyContent="center"
+          maxWidth={900}
+          mx="auto"
+        >
+          {stats.map((item, index) => (
+            <Box
+              key={index}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                borderBottom: "2px solid #ff0000",
+                pb: 2,
+                flex: 1,
+              }}
+            >
+              <Box sx={{ mr: 2 }}>{item.icon}</Box>
+              <Typography
+                variant="h5"
+                fontWeight={700}
+                sx={{ userSelect: "none" }}
+              >
+                {item.text}
+              </Typography>
+            </Box>
+          ))}
+        </Stack>
 
         <Typography
-          variant="h5"
-          sx={{
-            color: "#ff0000",
-            fontWeight: 500,
-            fontStyle: "normal",
-            userSelect: "none",
-            letterSpacing: 1,
-          }}
+          variant="body1"
+          textAlign="center"
+          mt={5}
+          sx={{ opacity: 0.6, maxWidth: 600, mx: "auto" }}
         >
-          {translate("subtitle")}
+          Şehrin en ateşli noktaları canlı yayında. Daha fazlası çok yakında
+          sizlerle!
         </Typography>
-
-        <Box
-          sx={{
-            mt: 6,
-            mx: "auto",
-            height: 3,
-            width: 80,
-            borderRadius: 2,
-            background:
-              "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,0.6) 50%, rgba(255,0,0,1) 100%)",
-            boxShadow: "0 0 12px 4px rgba(255,0,0,0.7)",
-            animation: "neonPulse 2.5s ease-in-out infinite",
-            "@keyframes neonPulse": {
-              "0%, 100%": { opacity: 1 },
-              "50%": { opacity: 0.6 },
-            },
-          }}
-        />
       </Box>
     </Stack>
   );
