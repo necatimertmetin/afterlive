@@ -1,11 +1,12 @@
 import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
 import { LocationOn as LocationPin } from "@mui/icons-material";
 import { useState } from "react";
+import { format } from "date-fns";
+import { tr } from "date-fns/locale";
 
 interface EventCardProps {
   title: string;
   date: string;
-  month: string;
   time: string;
   location: string;
   image: string;
@@ -14,12 +15,15 @@ interface EventCardProps {
 export const EventCard = ({
   title,
   date,
-  month,
   time,
   location,
   image,
 }: EventCardProps) => {
   const [hovered, setHovered] = useState(false);
+
+  const eventDate = new Date(date);
+  const day = format(eventDate, "d", { locale: tr }); // 24
+  const month = format(eventDate, "MMM", { locale: tr }); // Ara
 
   return (
     <Paper
@@ -127,13 +131,13 @@ export const EventCard = ({
         {/* Tarih */}
         <Stack alignItems="center" justifyContent="center" px={1}>
           <Typography variant="subtitle2" sx={{ fontSize: { xs: 12, sm: 14 } }}>
-            {month}
+            {month.toUpperCase()}
           </Typography>
           <Typography
             variant="h5"
             sx={{ fontSize: { xs: 18, sm: 22 }, lineHeight: 1.2 }}
           >
-            {date}
+            {day}
           </Typography>
           <Typography
             variant="caption"
