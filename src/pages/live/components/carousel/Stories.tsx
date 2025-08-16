@@ -1,10 +1,9 @@
-import { Stack, Box, Typography } from "@mui/material";
+import { Stack, Box } from "@mui/material";
 import Slider from "react-slick";
 
 type Story = {
   id: number;
   label: string;
-  color: string;
   image: string;
 };
 
@@ -22,62 +21,52 @@ export const Stories = ({ stories, onSelect }: StoriesProps) => {
     dots: false,
     infinite: true,
     speed: 300,
-    centerMode: true,
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 1,
     swipeToSlide: true,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1000,
     cssEase: "linear",
   };
 
   return (
     <Slider {...settings}>
-      {stories.map((story) => (
-        <Stack
-          key={story.id}
-          justifyContent="center"
-          alignItems="center"
-          onClick={() => handleClick(story.id)}
-          sx={{
-            display: "flex !important",
-            cursor: "pointer",
-            transition: "transform 0.1s ease-in-out",
-          }}
-        >
-          <Box
+      {stories.map((story) => {
+        console.log(story);
+        return (
+          <Stack
+            key={story.id}
+            justifyContent="center"
+            alignItems="center"
+            onClick={() => handleClick(story.id)}
             sx={{
-              width: 196,
-              height: 196,
-              borderRadius: "50px",
-              border: "3px solid red",
-              position: "relative",
-              backgroundSize: "200% 200%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              overflow: "hidden",
-              "&:hover": {
-                boxShadow: "0 0 20px #ff0000",
-              },
+              display: "flex !important",
+              cursor: "pointer",
+              transition: "transform 0.1s ease-in-out",
             }}
           >
-            <img
-              src={story.image}
-              alt={story.label}
-              style={{
-                height: "100%", // yüksekliği sabit tut
-                width: "auto", // oranı koru
+            <Box
+              sx={{
+                width: "237px",
+                height: "180px",
+                borderRadius: "75px",
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
+                backgroundImage: `url(${story.image})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                filter: "drop-shadow(0px 0px 5px #000)",
+                my: 2,
               }}
             />
-          </Box>
-
-          <Typography textAlign="center" mt={1}>
-            {story.label}
-          </Typography>
-        </Stack>
-      ))}
+          </Stack>
+        );
+      })}
     </Slider>
   );
 };

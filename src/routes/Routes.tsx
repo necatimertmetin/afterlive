@@ -3,7 +3,6 @@ import { Contact } from "../pages/contact/Contact";
 import { PrivacyPolicy } from "../pages/privacy/PrivacyPolicy";
 import { Home } from "../pages/home/Home";
 import { Live } from "../pages/live/Live";
-import { Live2 } from "../pages/live2/Live2";
 import { Events } from "../pages/events/Events";
 
 export type AppRoute = {
@@ -26,13 +25,6 @@ export const ROUTES: AppRoute[] = [
   {
     path: "/live",
     element: <Live />,
-    labelKey: "live",
-    showInMenu: true,
-    showInFooter: true,
-  },
-  {
-    path: "/live2",
-    element: <Live2 />,
     labelKey: "live",
     showInMenu: true,
     showInFooter: true,
