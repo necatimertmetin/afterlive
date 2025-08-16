@@ -58,11 +58,15 @@ export const Calendar = ({ mockEvents }: Props) => {
       >
         <IconButton
           onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
-          sx={{ color: "white" }}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
           <ArrowBackIos fontSize="small" />
         </IconButton>
-        <Typography variant="h6" fontWeight="bold">
+        <Typography variant="h6">
           {format(currentMonth, "MMMM", { locale: tr }).toUpperCase()}
         </Typography>
         <IconButton
@@ -112,11 +116,14 @@ export const Calendar = ({ mockEvents }: Props) => {
                   cursor: "pointer",
                   fontWeight: "bold",
                   borderRadius: "8px",
-                  color: isSelected || isEventDay ? "error.main" : "white",
+                  color:
+                    isSelected || isEventDay
+                      ? (theme) => theme.palette.primary.main
+                      : "white",
                   "&:hover": { color: "error.main" },
                 }}
               >
-                {format(day, "d")}
+                <Typography variant="h5"> {format(day, "d")}</Typography>
               </Box>
             </Grid>
           );
