@@ -2,15 +2,13 @@ export const mockData = [
   {
     id: 0,
     label: "Club Mirage",
-    color: "#FF4D4F",
-    image: "images/locations/IMG-20250809-WA0011.jpg",
+    image: "images/locations/IMG-20250809-WA0018.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "/images/locations/IMG-20250809-WA0011.jpg",
   },
   {
     id: 1,
     label: "Bar Lumos",
-    color: "#1890FF",
     image: "images/locations/IMG-20250809-WA0012.jpg",
     videoUrl: "https://www.w3schools.com/html/movie.mp4",
     locationImg: "https://picsum.photos/seed/locationlumos/400/250",
@@ -18,7 +16,6 @@ export const mockData = [
   {
     id: 2,
     label: "Electra",
-    color: "#52C41A",
     image: "images/locations/IMG-20250809-WA0013.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "https://picsum.photos/seed/locationelectra/400/250",
@@ -26,7 +23,6 @@ export const mockData = [
   {
     id: 3,
     label: "Neon Nights",
-    color: "#9C27B0",
     image: "images/locations/IMG-20250809-WA0014.jpg",
     videoUrl: "https://www.w3schools.com/html/movie.mp4",
     locationImg: "https://picsum.photos/seed/locationneon/400/250",
@@ -34,7 +30,6 @@ export const mockData = [
   {
     id: 4,
     label: "The Velvet Room",
-    color: "#E91E63",
     image: "images/locations/IMG-20250809-WA0015.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "https://picsum.photos/seed/locationvelvet/400/250",
@@ -42,7 +37,6 @@ export const mockData = [
   {
     id: 5,
     label: "Skyline Bar",
-    color: "#00BCD4",
     image: "images/locations/IMG-20250809-WA0016.jpg",
     videoUrl: "https://www.w3schools.com/html/movie.mp4",
     locationImg: "https://picsum.photos/seed/locationskyline/400/250",
@@ -50,7 +44,6 @@ export const mockData = [
   {
     id: 6,
     label: "Midnight Pulse",
-    color: "#FF9800",
     image: "images/locations/IMG-20250809-WA0017.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "https://picsum.photos/seed/locationmidnight/400/250",
@@ -58,7 +51,6 @@ export const mockData = [
   {
     id: 7,
     label: "Aurora Lounge",
-    color: "#4CAF50",
     image: "images/locations/IMG-20250809-WA0018.jpg",
     videoUrl: "https://www.w3schools.com/html/movie.mp4",
     locationImg: "https://picsum.photos/seed/locationaurora/400/250",
@@ -66,7 +58,6 @@ export const mockData = [
   {
     id: 8,
     label: "Solar Flare",
-    color: "#FF5722",
     image: "images/locations/IMG-20250809-WA0019.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "https://picsum.photos/seed/locationsolarflare/400/250",
@@ -74,7 +65,6 @@ export const mockData = [
   {
     id: 9,
     label: "Echo Chamber",
-    color: "#3F51B5",
     image: "images/locations/IMG-20250809-WA0020.jpg",
     videoUrl: "https://www.w3schools.com/html/movie.mp4",
     locationImg: "https://picsum.photos/seed/locationecho/400/250",
@@ -82,7 +72,6 @@ export const mockData = [
   {
     id: 10,
     label: "Lunar Lounge",
-    color: "#673AB7",
     image: "images/locations/IMG-20250809-WA0021.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "https://picsum.photos/seed/locationlunar/400/250",
@@ -90,7 +79,6 @@ export const mockData = [
   {
     id: 11,
     label: "Pulse Point",
-    color: "#009688",
     image: "images/locations/IMG-20250809-WA0022.jpg",
     videoUrl: "https://www.w3schools.com/html/movie.mp4",
     locationImg: "https://picsum.photos/seed/locationpulse/400/250",
@@ -98,7 +86,6 @@ export const mockData = [
   {
     id: 12,
     label: "Crimson Tide",
-    color: "#D32F2F",
     image: "images/locations/IMG-20250809-WA0023.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "https://picsum.photos/seed/locationcrimson/400/250",
@@ -106,7 +93,6 @@ export const mockData = [
   {
     id: 13,
     label: "Blue Velvet",
-    color: "#1976D2",
     image: "images/locations/IMG-20250809-WA0024.jpg",
     videoUrl: "https://www.w3schools.com/html/movie.mp4",
     locationImg: "https://picsum.photos/seed/locationbluevelvet/400/250",
@@ -114,7 +100,6 @@ export const mockData = [
   {
     id: 14,
     label: "Radiant Room",
-    color: "#FBC02D",
     image: "images/locations/IMG-20250809-WA0025.jpg",
     videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
     locationImg: "https://picsum.photos/seed/locationradiant/400/250",
@@ -122,7 +107,6 @@ export const mockData = [
   {
     id: 15,
     label: "Vortex",
-    color: "#7B1FA2",
     image: "images/locations/IMG-20250809-WA0026.jpg",
     videoUrl: "https://www.w3schools.com/html/movie.mp4",
     locationImg: "https://picsum.photos/seed/locationvortex/400/250",

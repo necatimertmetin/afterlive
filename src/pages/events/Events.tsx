@@ -3,7 +3,6 @@ import { EventCard } from "./components/EventCard";
 import type { Event } from "./components/types";
 import { Calendar } from "./components/Calendar";
 
-// 🔹 Etkinlik verileri
 const mockEvents: Event[] = [
   {
     id: 1,

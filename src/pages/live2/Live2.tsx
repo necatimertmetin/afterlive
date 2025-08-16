@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Container, Paper, Stack } from "@mui/material";
 import { useState } from "react";
 import { Stories } from "./components/carousel/Stories";
 import { mockData } from "./components/data";
@@ -6,57 +6,84 @@ import { mockData } from "./components/data";
 export const Live2 = () => {
   const [selectedId, setSelectedId] = useState(0);
   console.log(selectedId);
-  // Sadece selectedId değiştiğinde yeniden hesaplanır
   return (
     <Box my={4}>
-      <Box mb={4}>
+      <Box mb={4} sx={{ backgroundColor: "#00000088" }}>
         <Stories
           stories={mockData}
           onSelect={(id: number) => setSelectedId(id)}
         />
       </Box>
-      <Stack direction={"row"} justifyContent={"center"} alignItems={"center"}>
-        <Box
-          sx={{
-            borderRight: "2px solid red",
-            height: "480px",
-            width: "853px",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <Stack
-            direction={"row"}
-            alignItems={"center"}
-            spacing={0.5}
-            sx={{ ml: 1, mt: 1, position: "absolute" }}
-          >
-            <Typography color="primary" variant="h6">
-              ◉
-            </Typography>
-            <Typography variant="body2" fontWeight={600}>
-              LIVE
-            </Typography>
+
+      <Container sx={{ py: 5 }}>
+        {/* Main Content: Video + Sidebar */}
+        <Stack direction={{ xs: "column", md: "row" }} spacing={3}>
+          {/* Sol: Video ve Bilgiler */}
+          <Box sx={{ flex: 2 }}>
+            {/* Video Player */}
+            <Paper
+              elevation={6}
+              sx={{
+                width: "100%",
+                aspectRatio: "16/9",
+                mb: 2,
+                overflow: "hidden",
+                borderRadius: "75px",
+              }}
+            >
+              <iframe
+                src={"https://www.youtube.com/embed/tgbNymZ7vqY"}
+                title={"hey"}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+              ></iframe>
+            </Paper>
+          </Box>
+
+          <Stack spacing={2} sx={{ flex: 1 }}>
+            <Paper
+              elevation={6}
+              sx={{
+                width: "100%",
+                aspectRatio: "4/2",
+                overflow: "hidden",
+                borderRadius: "75px",
+              }}
+            >
+              <iframe
+                src={
+                  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.123456789012!2d32.859742415634!3d39.933363579659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34bbd9b9fef5d5%3A0xb368a789a9dce0b9!2sKızılay!5e0!3m2!1str!2str!4v1754737583020!5m2!1str!2str"
+                }
+                title="Map"
+                width="100%"
+                height="100%"
+                style={{
+                  border: 0,
+                  filter: "grayscale(1) invert(1)",
+                }}
+                allowFullScreen
+              ></iframe>
+            </Paper>
+            <Paper
+              elevation={6}
+              sx={{
+                width: "100%",
+                aspectRatio: "8/5",
+                overflow: "hidden",
+                borderRadius: "75px",
+              }}
+            >
+              <img
+                src={"images/locations/IMG-20250809-WA0013.jpg"}
+                alt="Event"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Paper>
           </Stack>
-          <img
-            src={
-              "https://images.pexels.com/photos/2034851/pexels-photo-2034851.jpeg"
-            }
-            width={"100%"}
-          />
-        </Box>
-        <Stack sx={{ height: "480px", width: "256px" }}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1301562970202!2d27.115552562489405!3d38.45222019675594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd9b9fef5d507%3A0xf368a789a9dce0b9!2sDurock!5e0!3m2!1str!2sus!4v1754737583019!5m2!1str!2sus"
-            width="100%"
-            height="100%"
-            style={{ border: 0, filter: "invert(100%) grayscale(1)" }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
         </Stack>
-      </Stack>
+      </Container>
     </Box>
   );
 };
