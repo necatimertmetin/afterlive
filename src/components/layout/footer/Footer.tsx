@@ -36,7 +36,7 @@ export const Footer = () => {
           <img
             src={themeMode === "dark" ? logoLight : logoDark}
             height={"256px"}
-            style={{ opacity: 0.4, transform: "rotate(-5deg)" }}
+            style={{ opacity: 0.8, transform: "rotate(-5deg)" }}
           />
         </Grid>
 
