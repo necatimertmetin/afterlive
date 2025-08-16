@@ -16,7 +16,7 @@ const mockEvents: Event[] = [
   {
     id: 2,
     title: "Jazz Night",
-    date: "2025-01-12T20:00:00",
+    date: "2025-08-29T20:00:00",
     time: "20:00",
     location: "Ankara",
     image: "https://picsum.photos/id/1015/800/450",
@@ -89,7 +89,7 @@ export const Events = () => {
         </Typography>
       </Box>
 
-      <Grid container spacing={4}>
+      <Grid container spacing={4} alignItems={"stretch"}>
         {/* Sol kısım: Etkinlik Kartları */}
         <Grid size={{ xs: 12, sm: 8 }}>
           <Grid container spacing={2}>

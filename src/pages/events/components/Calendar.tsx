@@ -1,5 +1,12 @@
-import { Paper, Box, IconButton, Typography, Grid } from "@mui/material";
-import { tr } from "date-fns/locale";
+import {
+  Paper,
+  Box,
+  IconButton,
+  Typography,
+  Grid,
+  useTheme,
+} from "@mui/material";
+import { tr, enUS } from "date-fns/locale";
 import { useState } from "react";
 import {
   startOfMonth,
@@ -10,29 +17,36 @@ import {
   format,
   isSameDay,
 } from "date-fns";
-import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 import type { Event } from "./types";
-
+import { useTranslate } from "../../../hooks/useTranslation";
 type Props = { mockEvents: Event[] };
 
 export const Calendar = ({ mockEvents }: Props) => {
+  const { getLocale } = useTranslate();
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const theme = useTheme();
+  // Takvimin diline göre locale seçimi
+  const locale = getLocale() === "tr" ? tr : enUS;
 
-  // Ay içindeki gerçek günler
+  // Ay ve günler
   const startDate = startOfMonth(currentMonth);
   const endDate = endOfMonth(currentMonth);
   const monthDays = eachDayOfInterval({ start: startDate, end: endDate });
 
-  // Haftanın günü (Pzt=0 ... Pzr=6) — JS getDay() Pzr=0 verir; Pzt-önde sisteme çeviriyoruz
-  const firstDayIndex = (startDate.getDay() + 6) % 7;
+  // İlk gün indexi: Türkçe -> Pazartesi=0, İngilizce -> Pazar=0
+  const firstDayIndex =
+    getLocale() === "tr"
+      ? (startDate.getDay() + 6) % 7 // Pazartesi = 0
+      : startDate.getDay(); // Pazar = 0
+
   const leadingBlanks = Array.from(
     { length: firstDayIndex },
     (_, i) => `lead-${i}`
   );
-
   const totalCells = leadingBlanks.length + monthDays.length;
-  const trailingBlanks = (7 - (totalCells % 7)) % 7; // 0..6
+  const trailingBlanks = (7 - (totalCells % 7)) % 7;
   const trailingKeys = Array.from(
     { length: trailingBlanks },
     (_, i) => `trail-${i}`
@@ -40,46 +54,47 @@ export const Calendar = ({ mockEvents }: Props) => {
 
   const eventDates = mockEvents.map((ev) => new Date(ev.date));
 
+  // Haftanın günleri
+  const weekDays =
+    getLocale() === "tr"
+      ? ["PZT", "SAL", "ÇAR", "PER", "CUM", "CMT", "PZR"]
+      : ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
   return (
-    <Paper variant="outlined" sx={{ borderRadius: 5 }}>
-      {/* Yıl */}
-      <Typography variant="h5" textAlign={"center"}>
-        {format(currentMonth, "yyyy", { locale: tr })}
+    <Paper
+      variant="outlined"
+      sx={{
+        borderRadius: 5,
+        pb: 10,
+      }}
+    >
+      <Typography variant="h5" textAlign={"center"} sx={{ pt: 1 }}>
+        {format(currentMonth, "yyyy", { locale })}
       </Typography>
 
-      {/* Ay ve navigasyon */}
       <Box
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        borderTop="2px solid #d32f2f"
-        borderBottom="2px solid #d32f2f"
-        mb={1}
+        borderTop="2px solid "
+        borderBottom="2px solid "
+        borderColor={(theme) => theme.palette.primary.main}
+        my={1}
       >
-        <IconButton
-          onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <ArrowBackIos fontSize="small" />
+        <IconButton onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}>
+          <NavigateBefore />
         </IconButton>
         <Typography variant="h6">
-          {format(currentMonth, "MMMM", { locale: tr }).toUpperCase()}
+          {format(currentMonth, "MMMM", { locale }).toUpperCase()}
         </Typography>
-        <IconButton
-          onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
-          sx={{ color: "white" }}
-        >
-          <ArrowForwardIos fontSize="small" />
+        <IconButton onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}>
+          <NavigateNext />
         </IconButton>
       </Box>
 
       {/* Gün başlıkları */}
       <Grid container>
-        {["PZT", "SAL", "ÇAR", "PER", "CUM", "CMT", "PZR"].map((d) => (
+        {weekDays.map((d) => (
           <Grid size={{ xs: 12 / 7 }} key={d}>
             <Typography
               textAlign={"center"}
@@ -92,16 +107,14 @@ export const Calendar = ({ mockEvents }: Props) => {
         ))}
       </Grid>
 
-      {/* Hücreler: baştaki boşlar + günler + sondaki boşlar */}
+      {/* Hücreler */}
       <Grid container>
-        {/* Leading boşlar */}
         {leadingBlanks.map((k) => (
           <Grid size={{ xs: 12 / 7 }} key={k}>
             <Box sx={{ m: "4px", p: "8px 0", height: 32 }} />
           </Grid>
         ))}
 
-        {/* Ay günleri */}
         {monthDays.map((day) => {
           const isEventDay = eventDates.some((d) => isSameDay(d, day));
           const isSelected = selectedDate && isSameDay(day, selectedDate);
@@ -114,22 +127,32 @@ export const Calendar = ({ mockEvents }: Props) => {
                   m: "4px",
                   p: "6px 0",
                   cursor: "pointer",
-                  fontWeight: "bold",
                   borderRadius: "8px",
                   color:
                     isSelected || isEventDay
                       ? (theme) => theme.palette.primary.main
-                      : "white",
-                  "&:hover": { color: "error.main" },
+                      : "inherit",
+                  "&:hover": { color: (theme) => theme.palette.primary.main },
                 }}
               >
-                <Typography variant="h5"> {format(day, "d")}</Typography>
+                <Typography
+                  variant="h4"
+                  fontWeight={isSelected || isEventDay ? "600" : "400"}
+                  sx={{
+                    filter:
+                      isSelected || isEventDay
+                        ? `drop-shadow(0 0 4px ${theme.palette.primary.main})`
+                        : "none",
+                    transition: "filter 0.2s",
+                  }}
+                >
+                  {format(day, "d")}
+                </Typography>
               </Box>
             </Grid>
           );
         })}
 
-        {/* Trailing boşlar */}
         {trailingKeys.map((k) => (
           <Grid size={{ xs: 12 / 7 }} key={k}>
             <Box sx={{ m: "4px", p: "8px 0", height: 32 }} />
