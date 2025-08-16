@@ -8,6 +8,32 @@ export const Live2 = () => {
   console.log(selectedId);
   return (
     <Box my={4}>
+      <Box
+        my={4}
+        sx={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundImage: `repeating-linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 1) 0px,
+      rgba(255, 0, 0, 1) 2px,
+      transparent 2px,
+      transparent 200px
+    )`,
+          filter:
+            "drop-shadow(0 0 4px red) drop-shadow(0 0 12px red) drop-shadow(0 0 24px red) drop-shadow(0 0 48px red)",
+          animation: "move 3s linear infinite",
+          zIndex: -1,
+          "@keyframes move": {
+            from: { backgroundPosition: "0 0" },
+            to: { backgroundPosition: "0 0" }, // aşağıya akış
+          },
+        }}
+      />
+
       <Box mb={4} sx={{ backgroundColor: "#00000088" }}>
         <Stories
           stories={mockData}

@@ -5,44 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Afterlive</title>
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        background: black;
-      }
-
-      .led-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        background-image: repeating-linear-gradient(
-          90deg,
-          rgba(255, 0, 0, 1) 0px,
-          rgba(255, 0, 0, 1) 2px,
-          transparent 2px,
-          transparent 200px
-        );
-
-        filter: drop-shadow(0 0 4px red) drop-shadow(0 0 12px red)
-          drop-shadow(0 0 24px red) drop-shadow(0 0 48px red);
-
-        animation: move 3s linear infinite;
-        z-index: -1;
-      }
-
-      @keyframes move {
-        from {
-          background-position: 0 0;
-        }
-        to {
-          background-position: 0 100px; /* aşağıya akış */
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="led-bg"></div>

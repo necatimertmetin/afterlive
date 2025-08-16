@@ -1,8 +1,11 @@
-import { Box, Grid, Typography, Link, Stack } from "@mui/material";
-import logo from "/images/logo/logo.png";
+import { Box, Grid, Typography, Link, Stack, useTheme } from "@mui/material";
+import logoDark from "/images/logo/logo-dark.png";
+import logoLight from "/images/logo/logo-light.png";
 import { useTranslate } from "../../../hooks/useTranslation";
 export const Footer = () => {
   const { translate } = useTranslate("layout.footer");
+  const theme = useTheme();
+  const themeMode = theme.palette.mode;
   return (
     <Box
       component="footer"
@@ -10,6 +13,7 @@ export const Footer = () => {
       sx={{
         position: "relative",
         borderTop: "5px solid #ff0000",
+        background: (theme) => theme.palette.background.default,
         overflow: "hidden",
       }}
     >
@@ -30,7 +34,7 @@ export const Footer = () => {
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, md: 6 }}>
           <img
-            src={logo}
+            src={themeMode === "dark" ? logoLight : logoDark}
             height={"256px"}
             style={{ opacity: 0.4, transform: "rotate(-5deg)" }}
           />

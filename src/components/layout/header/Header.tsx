@@ -16,6 +16,7 @@ import {
   Divider,
   Box,
   useMediaQuery,
+  Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
@@ -27,11 +28,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslate } from "../../../hooks/useTranslation";
 import { ROUTES } from "../../../routes/Routes";
 import { useLocation } from "react-router-dom";
-import logo from "/images/logo/logoWide.png";
+import logoDark from "/images/logo/logo-wide-dark.png";
+import logoLight from "/images/logo/logo-wide-light.png";
 
 export const Header = () => {
   const colorMode = useContext(ColorModeContext);
   const theme = useTheme();
+
   const { translate, changeLocale } = useTranslate("layout.header");
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const location = useLocation();
@@ -67,7 +70,7 @@ export const Header = () => {
         <Toolbar disableGutters sx={{ minHeight: { xs: 56, sm: 64 } }}>
           <Stack direction={"row"} flexGrow={1}>
             <img
-              src={logo}
+              src={theme.palette.mode === "dark" ? logoDark : logoLight}
               alt="AfterLive"
               style={{
                 maxHeight: "24px",
@@ -87,8 +90,6 @@ export const Header = () => {
                     component={Link}
                     to={item.path}
                     sx={{
-                      fontSize: { sm: "0.875rem", md: "1rem" },
-                      fontWeight: "500",
                       px: { sm: 1, md: 2 },
                       color:
                         location.pathname === item.path
@@ -96,7 +97,7 @@ export const Header = () => {
                           : (theme) => theme.palette.text.primary,
                     }}
                   >
-                    {item.label}
+                    <Typography fontWeight={600}>{item.label}</Typography>
                   </Button>
                 ))}
               </Stack>
