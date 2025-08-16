@@ -3,22 +3,17 @@ import { LocationOn as LocationPin } from "@mui/icons-material";
 import { useState } from "react";
 import { format } from "date-fns";
 import { tr } from "date-fns/locale";
-
-interface EventCardProps {
-  title: string;
-  date: string;
-  time: string;
-  location: string;
-  image: string;
-}
+import type { Event } from "./types";
 
 export const EventCard = ({
   title,
+  description,
   date,
   time,
+  city,
   location,
   image,
-}: EventCardProps) => {
+}: Event) => {
   const [hovered, setHovered] = useState(false);
 
   const eventDate = new Date(date);
@@ -55,7 +50,7 @@ export const EventCard = ({
         }}
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1301562970202!2d27.115552562489405!3d38.45222019675594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd9b9fef5d507%3A0xf368a789a9dce0b9!2sDurock!5e0!3m2!1str!2sus!4v1754737583019!5m2!1str!2sus"
+          src={location}
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -65,7 +60,7 @@ export const EventCard = ({
         />
       </Box>
 
-      {/* Location badge */}
+      {/* City badge */}
       <Box
         sx={{
           position: "absolute",
@@ -90,7 +85,7 @@ export const EventCard = ({
         }}
       >
         <LocationPin fontSize="small" />
-        {location}
+        {city}
       </Box>
 
       {/* Resim alanı */}
@@ -167,7 +162,7 @@ export const EventCard = ({
               color: "text.secondary",
             }}
           >
-            Going hard this {month} with your favorite artists
+            {description}
           </Typography>
         </Box>
       </Stack>
