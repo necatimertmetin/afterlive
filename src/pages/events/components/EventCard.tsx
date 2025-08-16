@@ -29,7 +29,7 @@ export const EventCard = ({
     <Paper
       variant="outlined"
       sx={{
-        borderRadius: "20px",
+        borderRadius: 5,
         width: "100%",
         maxWidth: 280,
         overflow: "hidden",

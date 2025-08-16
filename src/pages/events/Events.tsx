@@ -1,35 +1,14 @@
-import { useState } from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  IconButton,
-  Paper,
-} from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { EventCard } from "./components/EventCard";
 import type { Event } from "./components/types";
-import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import {
-  startOfMonth,
-  endOfMonth,
-  eachDayOfInterval,
-  startOfWeek,
-  endOfWeek,
-  addMonths,
-  subMonths,
-  format,
-  isSameMonth,
-  isSameDay,
-} from "date-fns";
-import { tr } from "date-fns/locale";
+import { Calendar } from "./components/Calendar";
 
 // 🔹 Etkinlik verileri
 const mockEvents: Event[] = [
   {
     id: 1,
     title: "Rhythms Live",
-    date: "2025-12-24T21:30:00",
+    date: "2025-08-16T21:30:00",
     time: "21:30",
     location: "Izmir",
     image: "https://picsum.photos/id/1011/800/450",
@@ -93,24 +72,6 @@ const mockEvents: Event[] = [
 ];
 
 export const Events = () => {
-  const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-
-  // Takvim aralığı
-  const startDate = startOfWeek(startOfMonth(currentMonth), {
-    weekStartsOn: 1,
-  });
-  const endDate = endOfWeek(endOfMonth(currentMonth), { weekStartsOn: 1 });
-  const days = eachDayOfInterval({ start: startDate, end: endDate });
-
-  // Etkinlik tarihleri
-  const eventDates = mockEvents.map((ev) => new Date(ev.date));
-
-  // Seçilen güne göre filtreleme
-  const filteredEvents = selectedDate
-    ? mockEvents.filter((ev) => isSameDay(new Date(ev.date), selectedDate))
-    : mockEvents;
-
   return (
     <Container sx={{ my: 5 }}>
       <Box display="flex" alignItems="center" mb={3}>
@@ -132,7 +93,7 @@ export const Events = () => {
         {/* Sol kısım: Etkinlik Kartları */}
         <Grid size={{ xs: 12, sm: 8 }}>
           <Grid container spacing={2}>
-            {filteredEvents.map((event) => (
+            {mockEvents.map((event) => (
               <Grid key={event.id} size={{ xs: 12, sm: 4 }}>
                 <EventCard {...event} />
               </Grid>
@@ -142,84 +103,7 @@ export const Events = () => {
 
         {/* Sağ kısım: Takvim */}
         <Grid size={{ xs: 12, sm: 4 }}>
-          <Paper
-            sx={{
-              p: 2,
-              bgcolor: "#111",
-              color: "#fff",
-              borderRadius: 3,
-              textAlign: "center",
-            }}
-          >
-            <Box display="flex" justifyContent="space-between" mb={2}>
-              <IconButton
-                onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
-                sx={{ color: "white" }}
-              >
-                <ArrowBackIos fontSize="small" />
-              </IconButton>
-              <Typography fontWeight="bold">
-                {format(currentMonth, "yyyy MMMM", {
-                  locale: tr,
-                }).toUpperCase()}
-              </Typography>
-              <IconButton
-                onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
-                sx={{ color: "white" }}
-              >
-                <ArrowForwardIos fontSize="small" />
-              </IconButton>
-            </Box>
-
-            {/* Haftalık başlık */}
-            <Grid container>
-              {["PZT", "SAL", "ÇAR", "PER", "CUM", "CMT", "PZR"].map((day) => (
-                <Grid size={{ xs: 12 / 7 }} key={day}>
-                  <Typography variant="body2" sx={{ color: "#aaa" }}>
-                    {day}
-                  </Typography>
-                </Grid>
-              ))}
-            </Grid>
-
-            {/* Günler */}
-            <Grid container>
-              {days.map((day) => {
-                const isEventDay = eventDates.some((d) => isSameDay(d, day));
-                const isSelected = selectedDate && isSameDay(day, selectedDate);
-
-                return (
-                  <Grid
-                    size={{ xs: 12 / 7 }}
-                    key={day.toISOString()}
-                    onClick={() => setSelectedDate(day)}
-                  >
-                    <Box
-                      sx={{
-                        m: "4px",
-                        p: "8px 0",
-                        borderRadius: "50%",
-                        cursor: "pointer",
-                        bgcolor: isSelected
-                          ? "error.main"
-                          : isEventDay
-                          ? "error.dark"
-                          : "transparent",
-                        color: isSelected || isEventDay ? "white" : "white",
-                        opacity: isSameMonth(day, currentMonth) ? 1 : 0.4,
-                        transition: "0.2s",
-                        "&:hover": {
-                          bgcolor: "error.main",
-                        },
-                      }}
-                    >
-                      {format(day, "d")}
-                    </Box>
-                  </Grid>
-                );
-              })}
-            </Grid>
-          </Paper>
+          <Calendar mockEvents={mockEvents} />
         </Grid>
       </Grid>
     </Container>
