@@ -1,5 +1,5 @@
 import { Box, Container, Paper, Stack } from "@mui/material";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Stories } from "./components/carousel/Stories";
 import { useEvents } from "../../hooks/useEvents";
 
@@ -18,9 +18,14 @@ export const Live = () => {
     }).filter((e) => e.isLive);
   }, [Events]);
 
-  const [selectedId, setSelectedId] = useState<number>(
-    liveEvents.length > 0 ? liveEvents[0].id : 0
-  );
+  const [selectedId, setSelectedId] = useState<number>(0);
+
+  // Eğer liveEvents varsa ve selectedId geçerli değilse, ilk liveEvent'i seç
+  useEffect(() => {
+    if (liveEvents.length > 0 && !liveEvents.find((e) => e.id === selectedId)) {
+      setSelectedId(liveEvents[0].id);
+    }
+  }, [liveEvents, selectedId]);
 
   const selectedEvent = liveEvents.find((e) => e.id === selectedId);
 
@@ -75,7 +80,7 @@ export const Live = () => {
                 }}
               >
                 <iframe
-                  src={`https://player.twitch.tv/?channel=${selectedEvent.channel}&parent=localhost&muted=true`}
+                  src={`https://player.twitch.tv/?channel=${selectedEvent.channel}&parent=localhost&muted=true&autoplay=true`}
                   width="100%"
                   height="100%"
                   style={{ border: "none" }}
