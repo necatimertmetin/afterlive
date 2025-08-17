@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import type { Event } from "../types/Event";
-
 const mockEvents: Event[] = [
   {
     id: 1,
@@ -9,7 +8,8 @@ const mockEvents: Event[] = [
     time: "21:30",
     city: "Izmir",
     venueName: "Alsancak Pub",
-    location: "https://www.google.com/maps/embed?pb=!1m18!...",
+    location:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99980.12004890869!2d26.955565184291515!3d38.455816420376934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdda091b2188d%3A0x7cb143191e93ef1b!2sLucifer%20Gastropub!5e0!3m2!1sen!2str!4v1755427843308!5m2!1sen!2str",
     image: "https://picsum.photos/id/1011/800/450",
     description: "Energetic live music night",
     isLive: true,
@@ -22,7 +22,8 @@ const mockEvents: Event[] = [
     time: "20:00",
     city: "Ankara",
     venueName: "Ankara Jazz Club",
-    location: "https://www.google.com/maps/embed?pb=!1m18!...",
+    location:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6250.4966968825365!2d27.1378327966219!3d38.43573219128568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd85c969e4539%3A0x949b6205b3eb515!2sPorsuk%20Pub!5e0!3m2!1sen!2str!4v1755427564410!5m2!1sen!2str",
     image: "https://picsum.photos/id/1015/800/450",
     description: "Smooth jazz evening event",
     isLive: false,
@@ -35,7 +36,8 @@ const mockEvents: Event[] = [
     time: "19:00",
     city: "Istanbul",
     venueName: "Kadikoy Rock Arena",
-    location: "https://www.google.com/maps/embed?pb=!1m18!...",
+    location:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6250.4966968825365!2d27.1378327966219!3d38.43573219128568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd84324980d71%3A0x7c58d2733a4b0177!2sLa%20Puerta%20Alsancak!5e0!3m2!1sen!2str!4v1755427706427!5m2!1sen!2str",
     image: "https://picsum.photos/id/1016/800/450",
     description: "High energy rock festival",
     isLive: true,
@@ -48,7 +50,8 @@ const mockEvents: Event[] = [
     time: "22:00",
     city: "Antalya",
     venueName: "Antalya Beach Club",
-    location: "https://www.google.com/maps/embed?pb=!1m18!...",
+    location:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6250.4966968825365!2d27.1378327966219!3d38.43573219128568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd84324980d71%3A0x7c58d2733a4b0177!2sLa%20Puerta%20Alsancak!5e0!3m2!1sen!2str!4v1755427706427!5m2!1sen!2str",
     image: "https://picsum.photos/id/1021/800/450",
     description: "Electronic music party",
     isLive: false,
@@ -61,7 +64,8 @@ const mockEvents: Event[] = [
     time: "18:30",
     city: "Bursa",
     venueName: "Bursa Soul Lounge",
-    location: "https://www.google.com/maps/embed?pb=!1m18!...",
+    location:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6250.4966968825365!2d27.1378327966219!3d38.43573219128568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd85c969e4539%3A0x949b6205b3eb515!2sPorsuk%20Pub!5e0!3m2!1sen!2str!4v1755427564410!5m2!1sen!2str",
     image: "https://picsum.photos/id/1025/800/450",
     description: "Relaxing soul music",
     isLive: true,
@@ -74,7 +78,8 @@ const mockEvents: Event[] = [
     time: "20:45",
     city: "Izmir",
     venueName: "Izmir Blues Bar",
-    location: "https://www.google.com/maps/embed?pb=!1m18!...",
+    location:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6250.4966968825365!2d27.1378327966219!3d38.43573219128568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd84324980d71%3A0x7c58d2733a4b0177!2sLa%20Puerta%20Alsancak!5e0!3m2!1sen!2str!4v1755427706427!5m2!1sen!2str",
     image: "https://picsum.photos/id/1031/800/450",
     description: "Classic blues night",
     isLive: false,
@@ -87,7 +92,8 @@ const mockEvents: Event[] = [
     time: "17:00",
     city: "Ankara",
     venueName: "Ankara Folk House",
-    location: "https://www.google.com/maps/embed?pb=!1m18!...",
+    location:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24987.898209655163!2d27.07555366421042!3d38.47639675567182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd9949a594fad%3A0x69daad67fc0f4f37!2sBindokuzy%C3%BCzoniki!5e0!3m2!1sen!2str!4v1755427809510!5m2!1sen!2str",
     image: "https://picsum.photos/id/1035/800/450",
     description: "Traditional folk celebration",
     isLive: true,
@@ -100,7 +106,8 @@ const mockEvents: Event[] = [
     time: "22:30",
     city: "Istanbul",
     venueName: "Istanbul Pop Arena",
-    location: "https://www.google.com/maps/embed?pb=!1m18!...",
+    location:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6250.4966968825365!2d27.1378327966219!3d38.43573219128568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd84324980d71%3A0x7c58d2733a4b0177!2sLa%20Puerta%20Alsancak!5e0!3m2!1sen!2str!4v1755427706427!5m2!1sen!2str",
     image: "https://picsum.photos/id/1040/800/450",
     description: "Exciting pop music night",
     isLive: false,
