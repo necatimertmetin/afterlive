@@ -21,7 +21,7 @@ export function useEvents() {
     console.log(events);
     // Cleanup
     return () => unsubscribe();
-  }, []);
+  }, [events]);
 
   return events;
 }
