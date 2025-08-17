@@ -4,7 +4,7 @@ const mockEvents: Event[] = [
   {
     id: 1,
     title: "Rhythms Live",
-    date: "2025-08-17T14:25:36.123",
+    date: "2025-08-17T17:25:36.123",
     city: "Izmir",
     venueName: "Alsancak Pub",
     location:
