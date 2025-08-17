@@ -80,7 +80,7 @@ export const Live = () => {
                 }}
               >
                 <iframe
-                  src={`https://player.twitch.tv/?channel=${selectedEvent.channel}&parent=https://afterlive-28c12.web.app&muted=true&autoplay=true`}
+                  src={`https://player.twitch.tv/?channel=${selectedEvent.channel}&parent=${window.location.hostname}&muted=true&autoplay=true`}
                   width="100%"
                   height="100%"
                   style={{ border: "none" }}
