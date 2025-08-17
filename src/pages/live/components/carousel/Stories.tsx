@@ -25,46 +25,41 @@ export const Stories = ({ Events, onSelect }: StoriesProps) => {
     cssEase: "linear",
   };
 
-  const liveEvents = Events.filter((event) => event.isLive);
-
   return (
     <Slider {...settings}>
-      {liveEvents.map((story) => {
-        console.log(story);
-        return (
-          <Stack
-            key={story.id}
-            justifyContent="center"
-            alignItems="center"
+      {Events.map((story) => (
+        <Stack
+          key={story.id}
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            display: "flex !important",
+            transition: "transform 0.1s ease-in-out",
+          }}
+        >
+          <Box
+            onClick={() => handleClick(story.id)}
             sx={{
-              display: "flex !important",
-              transition: "transform 0.1s ease-in-out",
-            }}
-          >
-            <Box
-              onClick={() => handleClick(story.id)}
-              sx={{
-                width: "237px",
-                height: "180px",
-                borderRadius: "75px",
+              width: "237px",
+              height: "180px",
+              borderRadius: "75px",
 
-                cursor: "pointer",
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-                backgroundImage: `url(${story.image})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                filter: "drop-shadow(0px 0px 5px #000)",
-                my: 2,
-              }}
-            />
-          </Stack>
-        );
-      })}
+              cursor: "pointer",
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
+              backgroundImage: `url(${story.image})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              filter: "drop-shadow(0px 0px 5px #000)",
+              my: 2,
+            }}
+          />
+        </Stack>
+      ))}
     </Slider>
   );
 };

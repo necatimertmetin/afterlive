@@ -1,17 +1,27 @@
 import { Box, Container, Paper, Stack } from "@mui/material";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Stories } from "./components/carousel/Stories";
 import { useEvents } from "../../hooks/useEvents";
 
 export const Live = () => {
   const Events = useEvents();
-  const liveEvents = Events.filter((event) => event.isLive);
+
+  // isLive kontrolünü component içinde yapıyoruz
+  const liveEvents = useMemo(() => {
+    const now = new Date();
+    return Events.map((e) => {
+      const eventDate = new Date(e.date);
+      const diffHours =
+        (now.getTime() - eventDate.getTime()) / (1000 * 60 * 60);
+      // Event şimdi veya 3 saat öncesi ise live kabul et
+      return { ...e, isLive: diffHours >= 0 && diffHours <= 3 };
+    }).filter((e) => e.isLive);
+  }, [Events]);
 
   const [selectedId, setSelectedId] = useState<number>(
     liveEvents.length > 0 ? liveEvents[0].id : 0
   );
 
-  // Seçilen event objesi
   const selectedEvent = liveEvents.find((e) => e.id === selectedId);
 
   return (
@@ -45,7 +55,7 @@ export const Live = () => {
 
       {/* Stories carousel */}
       <Box mb={4} sx={{ backgroundColor: "#00000088" }}>
-        <Stories Events={Events} onSelect={setSelectedId} />
+        <Stories Events={liveEvents} onSelect={setSelectedId} />
       </Box>
 
       {/* Main Content */}
@@ -64,20 +74,11 @@ export const Live = () => {
                   borderRadius: "75px",
                 }}
               >
-                <video
-                  controls
-                  autoPlay
-                  muted
+                <iframe
+                  src={`https://player.twitch.tv/?channel=${selectedEvent.channel}&parent=localhost&muted=true`}
                   width="100%"
                   height="100%"
-                  style={{ objectFit: "cover" }}
-                >
-                  <source
-                    src={selectedEvent.streamUrl}
-                    type="application/x-mpegURL"
-                  />
-                  Your browser does not support the video tag.
-                </video>
+                ></iframe>
               </Paper>
             )}
           </Box>

@@ -6,9 +6,14 @@ import { useEvents } from "../../hooks/useEvents";
 export const Events = () => {
   const events = useEvents();
 
-  const upcomingEvents = events.filter(
-    (event) => new Date(event.date) >= new Date()
-  );
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // sadece tarih kısmını alıyoruz
+
+  const upcomingEvents = events.filter((event) => {
+    const eventDate = new Date(event.date);
+    eventDate.setHours(0, 0, 0, 0); // karşılaştırma için saatleri sıfırlıyoruz
+    return eventDate >= today;
+  });
   return (
     <Container sx={{ my: 5 }}>
       <Box display="flex" alignItems="center" mb={3}>
