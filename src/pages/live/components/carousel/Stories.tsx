@@ -1,18 +1,13 @@
 import { Stack, Box } from "@mui/material";
 import Slider from "react-slick";
-
-type Story = {
-  id: number;
-  label: string;
-  image: string;
-};
+import type { Event } from "../../../../types/Event";
 
 type StoriesProps = {
-  stories: Story[];
+  Events: Event[];
   onSelect: (id: number) => void;
 };
 
-export const Stories = ({ stories, onSelect }: StoriesProps) => {
+export const Stories = ({ Events, onSelect }: StoriesProps) => {
   const handleClick = (id: number) => {
     onSelect(id);
   };
@@ -30,27 +25,30 @@ export const Stories = ({ stories, onSelect }: StoriesProps) => {
     cssEase: "linear",
   };
 
+  const liveEvents = Events.filter((event) => event.isLive);
+
   return (
     <Slider {...settings}>
-      {stories.map((story) => {
+      {liveEvents.map((story) => {
         console.log(story);
         return (
           <Stack
             key={story.id}
             justifyContent="center"
             alignItems="center"
-            onClick={() => handleClick(story.id)}
             sx={{
               display: "flex !important",
-              cursor: "pointer",
               transition: "transform 0.1s ease-in-out",
             }}
           >
             <Box
+              onClick={() => handleClick(story.id)}
               sx={{
                 width: "237px",
                 height: "180px",
                 borderRadius: "75px",
+
+                cursor: "pointer",
                 position: "relative",
                 display: "flex",
                 alignItems: "center",

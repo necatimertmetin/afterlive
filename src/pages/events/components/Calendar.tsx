@@ -18,11 +18,11 @@ import {
   isSameDay,
 } from "date-fns";
 import { NavigateBefore, NavigateNext } from "@mui/icons-material";
-import type { Event } from "./types";
 import { useTranslate } from "../../../hooks/useTranslation";
-type Props = { mockEvents: Event[] };
+import type { Event } from "../../../types/Event";
+type Props = { events: Event[] };
 
-export const Calendar = ({ mockEvents }: Props) => {
+export const Calendar = ({ events }: Props) => {
   const { getLocale } = useTranslate();
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -52,7 +52,7 @@ export const Calendar = ({ mockEvents }: Props) => {
     (_, i) => `trail-${i}`
   );
 
-  const eventDates = mockEvents.map((ev) => new Date(ev.date));
+  const eventDates = events.map((ev) => new Date(ev.date));
 
   // Haftanın günleri
   const weekDays =

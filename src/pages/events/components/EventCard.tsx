@@ -3,7 +3,7 @@ import { LocationOn as LocationPin } from "@mui/icons-material";
 import { useState } from "react";
 import { format } from "date-fns";
 import { tr } from "date-fns/locale";
-import type { Event } from "./types";
+import type { Event } from "../../../types/Event";
 
 export const EventCard = ({
   title,
