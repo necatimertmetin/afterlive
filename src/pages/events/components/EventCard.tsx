@@ -9,7 +9,6 @@ export const EventCard = ({
   title,
   description,
   date,
-  time,
   city,
   location,
   image,
@@ -19,6 +18,7 @@ export const EventCard = ({
   const eventDate = new Date(date);
   const day = format(eventDate, "d", { locale: tr }); // 24
   const month = format(eventDate, "MMM", { locale: tr }); // Ara
+  const time = format(eventDate, "HH:mm", { locale: tr }); // 17:25
 
   return (
     <Paper
