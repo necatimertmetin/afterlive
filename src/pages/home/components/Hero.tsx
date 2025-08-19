@@ -50,14 +50,16 @@ export const Hero = () => {
           }}
         >
           <Stack spacing={2}>
-            <Typography variant="h3">{translate("title1")}</Typography>
-            <Typography variant="h2" fontWeight={600}>
+            <Typography variant="h3" color="#ffffff">
+              {translate("title1")}
+            </Typography>
+            <Typography variant="h2" color="#ffffff" fontWeight={600}>
               {translate("title2")}
             </Typography>
           </Stack>
 
           <Button
-            sx={{ height: "64px", width: "256px" }}
+            sx={{ height: "64px", width: "256px", color: "#ffffff" }}
             color="inherit"
             variant="outlined"
             href="/live"
