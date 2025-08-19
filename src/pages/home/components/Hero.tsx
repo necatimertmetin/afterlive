@@ -60,6 +60,7 @@ export const Hero = () => {
             sx={{ height: "64px", width: "256px" }}
             color="inherit"
             variant="outlined"
+            href="/live"
           >
             <Typography>{translate("button")}</Typography>
           </Button>

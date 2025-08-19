@@ -1,4 +1,4 @@
-import { Box, Container, Paper, Stack } from "@mui/material";
+import { Box, Container, Paper, Stack, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 import { Stories } from "./components/carousel/Stories";
 import { useEvents } from "../../hooks/useEvents";
@@ -31,7 +31,6 @@ export const Live = () => {
 
   return (
     <Box my={4}>
-      {/* Arka plan efekt */}
       <Box
         my={4}
         sx={{
@@ -58,84 +57,108 @@ export const Live = () => {
         }}
       />
 
-      {/* Stories carousel */}
-      <Box mb={4} sx={{ backgroundColor: "#00000088" }}>
-        <Stories Events={liveEvents} onSelect={setSelectedId} />
-      </Box>
-
-      {/* Main Content */}
-      <Container sx={{ py: 5 }}>
-        <Stack direction={{ xs: "column", md: "row" }} spacing={3}>
-          {/* Video Player */}
-          <Box sx={{ flex: 2 }}>
-            {selectedEvent && (
-              <Paper
-                elevation={6}
-                sx={{
-                  width: "100%",
-                  aspectRatio: "16/9",
-                  mb: 2,
-                  overflow: "hidden",
-                  borderRadius: "75px",
-                }}
-              >
-                <iframe
-                  src={`https://player.twitch.tv/?channel=${selectedEvent.channel}&parent=${window.location.hostname}&muted=true&autoplay=true`}
-                  width="100%"
-                  height="100%"
-                  style={{ border: "none" }}
-                ></iframe>
-              </Paper>
-            )}
+      {liveEvents.length === 0 ? (
+        // Hiç canlı yayın yoksa burası çalışır
+        <Container sx={{ py: 10 }}>
+          <Paper
+            variant="outlined"
+            sx={{
+              p: 5,
+              textAlign: "center",
+              minHeight: "50vh",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              borderWidth: 3,
+              borderColor: (theme) => theme.palette.primary.main,
+              gap: 5,
+            }}
+          >
+            <Typography variant="h3" gutterBottom>
+              🚦Şu anda canlı yayın yok🚦
+            </Typography>
+          </Paper>
+        </Container>
+      ) : (
+        <>
+          {/* Stories carousel */}
+          <Box mb={4} sx={{ backgroundColor: "#00000088" }}>
+            <Stories Events={liveEvents} onSelect={setSelectedId} />
           </Box>
 
-          {/* Sidebar: Map + Görsel */}
-          <Stack spacing={2} sx={{ flex: 1 }}>
-            {selectedEvent && (
-              <>
-                <Paper
-                  elevation={6}
-                  sx={{
-                    width: "100%",
-                    aspectRatio: "4/2",
-                    overflow: "hidden",
-                    borderRadius: "75px",
-                  }}
-                >
-                  <iframe
-                    src={selectedEvent.location}
-                    title="Map"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0, filter: "grayscale(1) invert(1)" }}
-                    allowFullScreen
-                  ></iframe>
-                </Paper>
-
-                <Paper
-                  elevation={6}
-                  sx={{
-                    width: "100%",
-                    aspectRatio: "8/5",
-                    overflow: "hidden",
-                    borderRadius: "75px",
-                  }}
-                >
-                  <img
-                    src={selectedEvent.image}
-                    alt={selectedEvent.title}
-                    style={{
+          {/* Main Content */}
+          <Container sx={{ py: 5 }}>
+            <Stack direction={{ xs: "column", md: "row" }} spacing={3}>
+              {/* Video Player */}
+              <Box sx={{ flex: 2 }}>
+                {selectedEvent && (
+                  <Paper
+                    elevation={6}
+                    sx={{
                       width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
+                      aspectRatio: "16/9",
+                      mb: 2,
+                      overflow: "hidden",
                     }}
-                  />
-                </Paper>
-              </>
-            )}
-          </Stack>
-        </Stack>
-      </Container>
+                  >
+                    <iframe
+                      src={`https://player.twitch.tv/?channel=${selectedEvent.channel}&parent=${window.location.hostname}&muted=true&autoplay=true`}
+                      width="100%"
+                      height="100%"
+                      style={{ border: "none" }}
+                    ></iframe>
+                  </Paper>
+                )}
+              </Box>
+
+              {/* Sidebar: Map + Görsel */}
+              <Stack spacing={2} sx={{ flex: 1 }}>
+                {selectedEvent && (
+                  <>
+                    <Paper
+                      elevation={6}
+                      sx={{
+                        width: "100%",
+                        aspectRatio: "4/2",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <iframe
+                        src={selectedEvent.location}
+                        title="Map"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, filter: "grayscale(1) invert(1)" }}
+                        allowFullScreen
+                      ></iframe>
+                    </Paper>
+
+                    <Paper
+                      elevation={6}
+                      sx={{
+                        width: "100%",
+                        aspectRatio: "8/5",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={selectedEvent.image}
+                        alt={selectedEvent.title}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </Paper>
+                  </>
+                )}
+              </Stack>
+            </Stack>
+          </Container>
+        </>
+      )}
     </Box>
   );
 };

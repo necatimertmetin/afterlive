@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import { EventCard } from "./components/EventCard";
 import { Calendar } from "./components/Calendar";
 import { useEvents } from "../../hooks/useEvents";
@@ -40,6 +40,22 @@ export const Events = () => {
                 <EventCard {...event} />
               </Grid>
             ))}
+            <Paper
+              sx={{
+                p: 5,
+                textAlign: "center",
+                minHeight: "50vh",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 5,
+              }}
+            >
+              <Typography variant="h3" gutterBottom>
+                🚦Planlanan Etkinlik Yok🚦
+              </Typography>
+            </Paper>
           </Grid>
         </Grid>
 

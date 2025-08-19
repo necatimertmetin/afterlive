@@ -50,18 +50,16 @@
   "pages": {
     "home": {
       "hero": {
-        "title1": "Tüm Türkiyede",
-        "title2": "Barların Nabzını Canlı Tutun",
+        "title1": "Tüm Mekanların",
+        "title2": "Canlı yayınları bir arada.",
         "button": "ŞU ANDA NELER VAR"
       },
       "ourStory": {
-        "title1": "Her şey o tanıdık soruyla başladı",
-        "title2": "AFTER NEREDE!?",
-        "description1": "Bu soru, sadece bir merak değil — bir kültür, bir ihtiyaçtı.",
-        "description2": "Biz o gecelerde, bu sorunun peşine düştük.",
-        "description3": "Ve şimdi cevabı burada",
-
-        "slogan": "NEREYE GİDECEĞİNİ BİL"
+        "title1": "Artık ",
+        "title2": "“Nerde after var?”",
+        "title3": "diye sormanıza gerek yok.",
+        "brand": "AfterLive",
+        "title4": "Geceleri canlı keşfedin."
       },
       "whatWeHave": {
         "title": "AFTERLIVE da neler var?",

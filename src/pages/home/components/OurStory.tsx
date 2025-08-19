@@ -19,7 +19,6 @@ export const OurStory = () => {
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
           gap: { xs: 4, md: 6 },
           borderRadius: 4,
           p: { xs: 4, md: 6 },
@@ -34,15 +33,36 @@ export const OurStory = () => {
         >
           {translate("title1")}
         </Typography>
-        <Typography variant="h3" color="primary" fontWeight={600}>
+        <Typography
+          variant="h2"
+          color={"primary"}
+          sx={{
+            fontWeight: 600,
+            fontSize: { xs: "2rem", md: "3rem" },
+          }}
+        >
           {translate("title2")}
         </Typography>
-        <Typography variant="h5">
-          {translate("description1")}
-          <br />
-          {translate("description2")}
-          <br />
-          {translate("description3")}
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: 600,
+            fontSize: { xs: "2rem", md: "3rem" },
+          }}
+        >
+          {translate("title3")}
+        </Typography>
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: 600,
+            fontSize: { xs: "2rem", md: "3rem" },
+          }}
+        >
+          🚦 {translate("brand")}🚦
+        </Typography>
+        <Typography variant="h3" fontWeight={600}>
+          {translate("title4")}
         </Typography>
       </Grid>
     </Grid>
