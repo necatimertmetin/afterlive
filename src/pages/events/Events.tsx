@@ -2,10 +2,11 @@ import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import { EventCard } from "./components/EventCard";
 import { Calendar } from "./components/Calendar";
 import { useEvents } from "../../hooks/useEvents";
+import { useTranslate } from "../../hooks/useTranslation";
 
 export const Events = () => {
   const events = useEvents();
-
+  const { translate } = useTranslate("pages.events");
   const today = new Date();
   today.setHours(0, 0, 0, 0); // sadece tarih kısmını alıyoruz
 
@@ -53,7 +54,7 @@ export const Events = () => {
               }}
             >
               <Typography variant="h3" gutterBottom>
-                🚦Planlanan Etkinlik Yok🚦
+                🚦{translate("noEvents")}🚦
               </Typography>
             </Paper>
           </Grid>

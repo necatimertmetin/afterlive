@@ -10,9 +10,9 @@ import {
 } from "@mui/material";
 import {
   FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
   FaYoutube,
+  FaWhatsapp,
+  FaTelegramPlane,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SocialButton } from "./components/SocialButton";
@@ -82,11 +82,14 @@ export const Contact = () => {
 
           <Stack direction={"row"} spacing={3}>
             <Box>
+              <SocialButton
+                href="https://t.me/+YMQmYIklnHIxMWE0"
+                icon={<FaTelegramPlane />}
+              />
+              <SocialButton icon={<FaWhatsapp />} />
               <SocialButton icon={<FaInstagram />} />
               <SocialButton icon={<FaYoutube />} />
               <SocialButton icon={<FaXTwitter />} />
-              <SocialButton icon={<FaFacebookF />} />
-              <SocialButton icon={<FaLinkedinIn />} />
             </Box>
             <Box flexGrow={1}>
               <Stack

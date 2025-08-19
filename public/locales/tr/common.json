@@ -106,6 +106,13 @@
         }
       }
     },
+    "live": {
+      "noStream": "Şu anda canlı yayın yok"
+    },
+    "events": {
+      "title": "Etkinklikler",
+      "noEvents": "Planlanan Etkinlik Yok"
+    },
     "contact": {
       "title": "Merhaba",
       "send": "Gönder"

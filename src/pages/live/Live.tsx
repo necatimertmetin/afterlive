@@ -2,10 +2,11 @@ import { Box, Container, Paper, Stack, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 import { Stories } from "./components/carousel/Stories";
 import { useEvents } from "../../hooks/useEvents";
+import { useTranslate } from "../../hooks/useTranslation";
 
 export const Live = () => {
   const Events = useEvents();
-
+  const { translate } = useTranslate("pages.live");
   // isLive kontrolünü component içinde yapıyoruz
   const liveEvents = useMemo(() => {
     const now = new Date();
@@ -76,7 +77,7 @@ export const Live = () => {
             }}
           >
             <Typography variant="h3" gutterBottom>
-              🚦Şu anda canlı yayın yok🚦
+              🚦{translate("noStream")}🚦
             </Typography>
           </Paper>
         </Container>

@@ -55,13 +55,11 @@
         "button": "WHAT'S ON NOW"
       },
       "ourStory": {
-        "title1": "It all started with that familiar question",
-        "title2": "'WHERE'S THE AFTER!?'",
-        "description1": "That question wasn't just curiosity — it was a culture, a need.",
-        "description2": "We chased that question through the nights.",
-        "description3": "And now the answer is here",
-
-        "slogan": "Catch the rhythm. Feel the energy. Live the night."
+        "title1": "Now ",
+        "title2": "“Where’s the after?”",
+        "title3": "you don’t need to ask anymore.",
+        "brand": "AfterLive",
+        "title4": "Discover the nights live."
       },
       "whatWeHave": {
         "title": "What does AFTERLIVE offer?",
@@ -107,6 +105,13 @@
           "description": "Unite Turkey’s nightlife culture on a single platform."
         }
       }
+    },
+    "live": {
+      "noStream": "There is no live stream right now."
+    },
+    "events": {
+      "title": "Events",
+      "noEvents": "No Scheduled Events"
     },
     "contact": {
       "title": "Hello",
