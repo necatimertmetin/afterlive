@@ -19,7 +19,7 @@ export const Events = () => {
     <Container sx={{ my: 5 }}>
       <Box display="flex" alignItems="center" mb={3}>
         <Typography component="span" variant="h3" fontWeight="bold">
-          Etkinlikler
+          {translate("title")}
         </Typography>
         <Typography
           component="span"
