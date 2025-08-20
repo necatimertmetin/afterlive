@@ -1,27 +1,4 @@
 {
-  "seo": {
-    "home": {
-      "title": "Ana Sayfa | Afterlive"
-    },
-    "about": {
-      "title": "Hakkımızda | Afterlive"
-    },
-    "contact": {
-      "title": "İletişim | Afterlive"
-    },
-    "live": {
-      "title": "Canlı | Afterlive"
-    },
-    "events": {
-      "title": "Etkinklikler | Afterlive"
-    },
-    "blog": {
-      "title": "Blog | Afterlive"
-    },
-    "default": {
-      "title": "Afterlive"
-    }
-  },
   "layout": {
     "header": {
       "home": "ANASAYFA",
@@ -80,37 +57,6 @@
         "text": {
           "prefix": "Deneyimlerinizi",
           "suffix": "ile paylaşın"
-        }
-      }
-    },
-    "about": {
-      "title": "AFTER•LIVE — Ritmi Yakala, Enerjiyi Hisset",
-      "subtitle": "Gerçek bir gece, asla planlanmaz, yaşanır.",
-      "story": {
-        "title": "Hikayemiz",
-        "paragraph1": "Her şey o tanıdık soruyla başladı: \"After nerede?\" Bu sadece basit bir merak değil, gece hayatının olmazsa olmaz bir parçasıydı.",
-        "paragraph2": "Lisede öğrendiğim güvenlik kamerası sistemleri bilgisi, gecelerin enerjisiyle birleşti. Paint'te karaladığım ilk taslaklar, bir kaza ve uzun bir iyileşme sürecinden sonra gerçeğe dönüşmeye başladı.",
-        "paragraph3": "Sahibinden.com'da \"yazılımcı aranıyor\" ilanları, tanıdık tanıdık kurulan network, test yayınları ve pes etmeyen bir ekip...",
-        "paragraph4": "Çünkü biz biliyoruz ki: Gerçek bir gece, asla planlanmaz, yaşanır.",
-        "imageAlt": "AFTER•LIVE Ekibi"
-      },
-      "featuresTitle": "Neden AFTER•LIVE?",
-      "features": {
-        "live": {
-          "title": "Gerçek Zamanlı Yayın",
-          "description": "Mekanların enerjisini anlık olarak hisset, geceyi uzaktan yaşa."
-        },
-        "dj": {
-          "title": "DJ Performansları",
-          "description": "Kaçırmak istemediğin anlar için canlı müzik yayınları."
-        },
-        "community": {
-          "title": "Topluluk ve Bağlantı",
-          "description": "After nerede? Artık herkesin cevabı var."
-        },
-        "vision": {
-          "title": "Tekno Ruhunu Yaşat",
-          "description": "Türkiye'nin gece kültürünü tek bir platformda birleştir."
         }
       }
     },
