@@ -52,7 +52,7 @@
       "hero": {
         "title1": "Tüm Mekanların",
         "title2": "Canlı yayınları bir arada.",
-        "button": "ŞU ANDA NELER VAR"
+        "button": "AFTER VAR MI?"
       },
       "ourStory": {
         "title1": "Artık ",
@@ -61,6 +61,14 @@
         "brand": "AfterLive",
         "title4": "Geceleri canlı keşfedin."
       },
+      "spacer": {
+        "title": "ŞU AN İZMİR'DE",
+        "liveBars": "{{count}} BAR YAYINDA",
+        "events": "{{count}} ETKİNLİK HER HAFTA",
+        "comingSoon": "{{count}} MEKAN YAKINDA",
+        "footer": "Şehrin en ateşli noktaları canlı yayında. Daha fazlası çok yakında sizlerle!"
+      },
+
       "whatWeHave": {
         "title": "AFTERLIVE da neler var?",
         "subtitle": "Afterlive, seni müziğin kalbine ışınlar. Evde olabilirsin ama gece hep seninle.",
@@ -114,8 +122,11 @@
       "noEvents": "Planlanan Etkinlik Yok"
     },
     "contact": {
-      "title": "Merhaba",
-      "send": "Gönder"
+      "title": "guest katılımlar için sosyal medya hesaplarımızı takipte kalın ",
+      "send": "Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız başarıyla gönderildi!",
+      "error": "Mesaj gönderilirken bir hata oluştu!"
     }
   }
 }

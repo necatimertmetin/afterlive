@@ -1,32 +1,22 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
 import { useTranslate } from "../../../hooks/useTranslation";
-import heroImg from "/images/hero/hero.jpeg";
-
+import heroImg from "/images/hero/newHeroDark.png";
+import heroImgLight from "/images/hero/newHeroLight.png";
 export const Hero = () => {
   const { translate } = useTranslate("pages.home.hero");
-
+  const theme = useTheme();
   return (
     <Box
       sx={{
         position: "relative",
         height: "calc(100vh - 64px)",
-        backgroundImage: `url(${heroImg})`,
+        backgroundImage: `url(${
+          theme.palette.mode === "dark" ? heroImg : heroImgLight
+        })`,
         backgroundPosition: "center",
+        backgroundSize: "concovertain",
       }}
     >
-      <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundSize: "contain",
-          backgroundColor: "rgba(0,0,0,0.6)",
-          backdropFilter: "blur(4px)",
-          zIndex: 1,
-        }}
-      />
       <Stack
         direction={{ xs: "column", md: "row" }}
         justifyContent={{ xs: "center", md: "space-between" }}
@@ -64,7 +54,7 @@ export const Hero = () => {
             variant="outlined"
             href="/live"
           >
-            <Typography>{translate("button")}</Typography>
+            <Typography fontWeight={600}>{translate("button")}</Typography>
           </Button>
         </Stack>
       </Stack>

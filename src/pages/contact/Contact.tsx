@@ -7,19 +7,15 @@ import {
   Box,
   Snackbar,
   Alert,
+  Container,
 } from "@mui/material";
-import {
-  FaInstagram,
-  FaYoutube,
-  FaWhatsapp,
-  FaTelegramPlane,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 import { SocialButton } from "./components/SocialButton";
 import { useTranslate } from "../../hooks/useTranslation";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contant.css";
+
 export const Contact = () => {
   const { translate } = useTranslate("pages.contact");
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -27,33 +23,43 @@ export const Contact = () => {
   const [toast, setToast] = useState<{
     open: boolean;
     success: boolean | null;
-  }>({
-    open: false,
-    success: null,
+  }>({ open: false, success: null });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleClose = () => {
     setToast({ open: false, success: null });
   };
 
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const isFormValid =
+    formData.email.trim() !== "" && formData.message.trim() !== "";
+
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
-
     setLoading(true);
-
     emailjs
       .sendForm(
-        "service_1ya2t1u",
-        "YOUR_TEMPLATE_ID",
+        "service_kxpiy0a",
+        "template_lv17xvo", // Buraya kendi template ID'nizi yazın
         formRef.current,
-        "YOUR_PUBLIC_KEY"
+        "vwO_q49ta-lwXKM7S" // Public Key
       )
       .then(
         () => {
           setToast({ open: true, success: true });
           setLoading(false);
           formRef.current?.reset();
+          setFormData({ name: "", email: "", message: "" });
         },
         () => {
           setToast({ open: true, success: false });
@@ -63,35 +69,43 @@ export const Contact = () => {
   };
 
   return (
-    <>
-      <Grid container display={"flex"} justifyContent={"center"} p={5}>
-        <Grid size={{ xs: 12, sm: 10, md: 6 }}>
+    <Container>
+      <Grid container display="flex" justifyContent="center" p={5}>
+        <Grid sx={{ xs: 12, sm: 10, md: 6 }}>
           <Box mb={6}>
-            <Typography component={"span"} variant="h1" fontWeight="bold">
+            <Typography component="span" variant="h3" fontWeight="bold">
               {translate("title")}
             </Typography>
             <Typography
-              component={"span"}
-              variant="h1"
+              component="span"
+              variant="h3"
               fontWeight="bold"
               color="primary"
             >
               !
             </Typography>
           </Box>
-
-          <Stack direction={"row"} spacing={3}>
-            <Box>
-              <SocialButton
-                href="https://t.me/+YMQmYIklnHIxMWE0"
-                icon={<FaTelegramPlane />}
-              />
-              <SocialButton icon={<FaWhatsapp />} />
-              <SocialButton icon={<FaInstagram />} />
-              <SocialButton icon={<FaYoutube />} />
-              <SocialButton icon={<FaXTwitter />} />
-            </Box>
-            <Box flexGrow={1}>
+          <Grid container spacing={3}>
+            <Grid size={{ xs: 12, sm: 1 }}>
+              <Stack
+                direction={{ xs: "row", md: "column" }} // xs = mobil → yatay, md ve üstü → dikey
+                alignItems="center"
+              >
+                <SocialButton
+                  href="https://t.me/+YMQmYIklnHIxMWE0"
+                  icon={<FaTelegramPlane />}
+                />
+                <SocialButton
+                  href="https://chat.whatsapp.com/ENSSjXJTtWaG4BKN7w2KIH"
+                  icon={<FaWhatsapp />}
+                />
+                <SocialButton
+                  href="https://www.instagram.com/afterlive.tr?igsh=Y3oxZnl4MGRmYmho"
+                  icon={<FaInstagram />}
+                />
+              </Stack>
+            </Grid>
+            <Grid size={{ xs: 12, sm: 11 }}>
               <Stack
                 component="form"
                 spacing={3}
@@ -99,11 +113,20 @@ export const Contact = () => {
                 ref={formRef}
                 onSubmit={handleSend}
               >
-                <TextField label="Adınız" name="user_name" variant="outlined" />
+                <TextField
+                  label="Adınız"
+                  name="name"
+                  variant="outlined"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
                 <TextField
                   label="E-posta"
-                  name="user_email"
+                  name="email"
                   variant="outlined"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                 />
                 <TextField
                   label="Mesajınız"
@@ -111,23 +134,26 @@ export const Contact = () => {
                   variant="outlined"
                   multiline
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                 />
-                <Stack direction={"row"} justifyContent={"flex-end"}>
+                <Stack direction="row" justifyContent="flex-end">
                   <Button
                     size="large"
                     type="submit"
                     variant="contained"
                     color="primary"
-                    disabled={loading}
+                    disabled={loading || !isFormValid} // Gerekli alanlar dolmadıkça disabled
                   >
-                    <Typography fontWeight={"bold"}>
+                    <Typography fontWeight="bold">
                       {loading ? translate("sending") : translate("send")}
                     </Typography>
                   </Button>
                 </Stack>
               </Stack>
-            </Box>
-          </Stack>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
 
@@ -147,6 +173,6 @@ export const Contact = () => {
           {toast.success ? translate("success") : translate("error")}
         </Alert>
       </Snackbar>
-    </>
+    </Container>
   );
 };

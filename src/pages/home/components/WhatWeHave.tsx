@@ -26,7 +26,6 @@ export const WhatWeHave = () => {
       sx={{
         py: { xs: 5, md: 8 },
         px: { xs: 3, md: 6 },
-        minHeight: "40vh",
       }}
     >
       <Typography
