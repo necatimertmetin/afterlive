@@ -92,7 +92,7 @@ export const Contact = () => {
                 alignItems="center"
               >
                 <SocialButton
-                  href="https://t.me/+YMQmYIklnHIxMWE0"
+                  href="https://t.me/+DmGeMi5lEUBlNmVk"
                   icon={<FaTelegramPlane />}
                 />
                 <SocialButton

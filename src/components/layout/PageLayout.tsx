@@ -24,7 +24,7 @@ export const PageLayout: React.FC = () => {
         }}
       >
         <SocialButton
-          href="https://t.me/+YMQmYIklnHIxMWE0"
+          href="https://t.me/+DmGeMi5lEUBlNmVk"
           icon={<FaTelegramPlane />}
           bgColor="#27A3E2"
         />
