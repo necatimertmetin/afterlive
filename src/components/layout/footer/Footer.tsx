@@ -68,17 +68,6 @@ export const Footer = () => {
         <Typography color="error" variant="body2">
           {translate("copyright", { year: new Date().getFullYear() })}
         </Typography>
-        <Stack direction={"row"} spacing={2}>
-          <Typography color="error" variant="body2">
-            LinkedIn
-          </Typography>
-          <Typography color="error" variant="body2">
-            Twitter
-          </Typography>
-          <Typography color="error" variant="body2">
-            Instagram
-          </Typography>
-        </Stack>
       </Stack>
     </Box>
   );
