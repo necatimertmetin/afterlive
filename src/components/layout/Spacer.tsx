@@ -66,7 +66,7 @@ export const Spacer = () => {
     >
       <Box
         sx={{
-          py: { xs: 5, md: 8 },
+          py: { xs: 1, md: 8 },
           px: { xs: 3, md: 6 },
           minHeight: "40vh",
           position: "relative",
@@ -117,7 +117,12 @@ export const Spacer = () => {
           variant="body1"
           textAlign="center"
           mt={{ xs: 2, md: 10 }}
-          sx={{ opacity: 0.6, maxWidth: 600, mx: "auto" }}
+          sx={{
+            opacity: 0.6,
+            maxWidth: 600,
+            mx: "auto",
+            display: { xs: "none", md: "block" }, // <-- burada gizleme ayarı
+          }}
         >
           {translate("footer")}
         </Typography>
