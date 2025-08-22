@@ -41,22 +41,24 @@ export const Events = () => {
                 <EventCard {...event} />
               </Grid>
             ))}
-            <Paper
-              sx={{
-                p: 5,
-                textAlign: "center",
-                minHeight: "50vh",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 5,
-              }}
-            >
-              <Typography variant="h3" gutterBottom>
-                🚦{translate("noEvents")}🚦
-              </Typography>
-            </Paper>
+            {upcomingEvents.length < 1 && (
+              <Paper
+                sx={{
+                  p: 5,
+                  textAlign: "center",
+                  minHeight: "50vh",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 5,
+                }}
+              >
+                <Typography variant="h3" gutterBottom>
+                  🚦{translate("noEvents")}🚦
+                </Typography>
+              </Paper>
+            )}
           </Grid>
         </Grid>
 
