@@ -1,0 +1,24 @@
+{
+  "1": {
+    "id": 1,
+    "title": "Rhythms Live",
+    "date": "2025-08-15T17:25:36.123",
+    "city": "Izmir",
+    "venueName": "Alsancak Pub",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99980.12004890869!2d26.955565184291515!3d38.455816420376934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdda091b2188d%3A0x7cb143191e93ef1b!2sLucifer%20Gastropub!5e0!3m2!1sen!2str!4v1755427843308!5m2!1sen!2str",
+    "image": "https://picsum.photos/id/1011/800/450",
+    "description": "Energetic live music night",
+    "channel": "test"
+  },
+  "2": {
+    "id": 2,
+    "title": "Jazz Night",
+    "date": "2025-08-22T17:13:36.123",
+    "city": "Ankara",
+    "venueName": "Ankara Jazz Club",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6250.4966968825365!2d27.1378327966219!3d38.43573219128568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd85c969e4539%3A0x949b6205b3eb515!2sPorsuk%20Pub!5e0!3m2!1sen!2str!4v1755427564410!5m2!1sen!2str",
+    "image": "https://picsum.photos/id/1015/800/450",
+    "description": "Smooth jazz evening event",
+    "channel": "aaa"
+  }
+}

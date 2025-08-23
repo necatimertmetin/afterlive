@@ -5,9 +5,7 @@ export function useEvents() {
   const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
-    // jsDelivr CDN üzerinden JSON dosyanın URL'si
-    const url =
-      "https://cdn.jsdelivr.net/gh/necatimertmetin/afterlive@main/event.json";
+    const url = "/event.json";
 
     fetch(url)
       .then((res) => res.json())
