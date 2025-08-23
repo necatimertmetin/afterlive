@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import { Contact } from "../pages/contact/Contact";
-import { PrivacyPolicy } from "../pages/privacy/PrivacyPolicy";
+import { EventCreator } from "../pages/EventCreator/EventCreator";
 import { Home } from "../pages/home/Home";
 import { Live } from "../pages/live/Live";
 import { Events } from "../pages/events/Events";
@@ -44,5 +44,5 @@ export const ROUTES: AppRoute[] = [
     showInFooter: true,
   },
 
-  { path: "/privacy", element: <PrivacyPolicy /> },
+  { path: "/privacy", element: <EventCreator /> },
 ];
