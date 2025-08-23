@@ -144,7 +144,10 @@ export const Live = () => {
                       }}
                     >
                       <img
-                        src={selectedEvent.image}
+                        src={
+                          "https://www.afterlive.cloud/images/locations/" +
+                          selectedEvent.image
+                        }
                         alt={selectedEvent.title}
                         style={{
                           width: "100%",

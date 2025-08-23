@@ -91,7 +91,7 @@ export const EventCard = ({
       {/* Resim alanı */}
       <Box
         component="img"
-        src={image}
+        src={"https://www.afterlive.cloud/images/locations/" + image}
         alt={title}
         sx={{
           width: "100%",
