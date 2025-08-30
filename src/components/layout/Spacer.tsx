@@ -14,7 +14,7 @@ export const Spacer = () => {
   const liveEvents = useMemo(() => {
     const now = new Date();
     return Events.map((e) => {
-      const eventDate = new Date(e.date);
+      const eventDate = new Date(e.startDate);
       const diffHours =
         (now.getTime() - eventDate.getTime()) / (1000 * 60 * 60);
       return { ...e, isLive: diffHours >= 0 && diffHours <= 3 };
@@ -30,7 +30,7 @@ export const Spacer = () => {
   oneWeekLater.setDate(today.getDate() + 7);
 
   const upcomingEvents = Events.filter((event) => {
-    const eventDate = new Date(event.date);
+    const eventDate = new Date(event.startDate);
     eventDate.setHours(0, 0, 0, 0);
     return eventDate >= today && eventDate <= oneWeekLater;
   });
