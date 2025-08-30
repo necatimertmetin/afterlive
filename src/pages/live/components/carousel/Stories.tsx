@@ -51,7 +51,7 @@ export const Stories = ({ Events, onSelect }: StoriesProps) => {
               justifyContent: "center",
               overflow: "hidden",
               backgroundImage: `url(${
-                "https://www.afterlive.cloud/images/locations/" + story.image
+                "https://www.afterlive.cloud/images/locations/" + story.logo
               })`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",

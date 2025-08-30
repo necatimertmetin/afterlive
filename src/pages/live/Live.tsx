@@ -10,12 +10,15 @@ export const Live = () => {
   // isLive kontrolünü component içinde yapıyoruz
   const liveEvents = useMemo(() => {
     const now = new Date();
+
     return Events.map((e) => {
-      const eventDate = new Date(e.date);
-      const diffHours =
-        (now.getTime() - eventDate.getTime()) / (1000 * 60 * 60);
-      // Event şimdi veya 3 saat öncesi ise live kabul et
-      return { ...e, isLive: diffHours >= 0 && diffHours <= 3 };
+      const startDate = new Date(e.startDate); // event başlangıç
+      const endDate = new Date(e.endDate); // event bitiş
+
+      return {
+        ...e,
+        isLive: now >= startDate && now <= endDate, // now arada mı kontrolü
+      };
     }).filter((e) => e.isLive);
   }, [Events]);
 
@@ -145,8 +148,13 @@ export const Live = () => {
                     >
                       <img
                         src={
-                          "https://www.afterlive.cloud/images/locations/" +
                           selectedEvent.image
+                            ? "https://www.afterlive.cloud/images/locations/" +
+                              selectedEvent.image
+                            : selectedEvent.logo
+                            ? "https://www.afterlive.cloud/images/logos/" +
+                              selectedEvent.logo
+                            : "/fallback.jpg" // istersen bir fallback ekleyebilirsin
                         }
                         alt={selectedEvent.title}
                         style={{

@@ -52,7 +52,7 @@ export const Calendar = ({ events }: Props) => {
     (_, i) => `trail-${i}`
   );
 
-  const eventDates = events.map((ev) => new Date(ev.date));
+  const eventDates = events.map((ev) => new Date(ev.startDate));
 
   // Haftanın günleri
   const weekDays =

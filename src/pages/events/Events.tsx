@@ -11,7 +11,7 @@ export const Events = () => {
   today.setHours(0, 0, 0, 0); // sadece tarih kısmını alıyoruz
 
   const upcomingEvents = events.filter((event) => {
-    const eventDate = new Date(event.date);
+    const eventDate = new Date(event.startDate);
     eventDate.setHours(0, 0, 0, 0); // karşılaştırma için saatleri sıfırlıyoruz
     return eventDate >= today;
   });

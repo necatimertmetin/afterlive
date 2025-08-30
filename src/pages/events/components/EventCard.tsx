@@ -8,14 +8,14 @@ import type { Event } from "../../../types/Event";
 export const EventCard = ({
   title,
   description,
-  date,
+  startDate,
   city,
   location,
   image,
 }: Event) => {
   const [hovered, setHovered] = useState(false);
 
-  const eventDate = new Date(date);
+  const eventDate = new Date(startDate);
   const day = format(eventDate, "d", { locale: tr }); // 24
   const month = format(eventDate, "MMM", { locale: tr }); // Ara
   const time = format(eventDate, "HH:mm", { locale: tr }); // 17:25
