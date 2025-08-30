@@ -151,10 +151,8 @@ export const Live = () => {
                           selectedEvent.image
                             ? "https://www.afterlive.cloud/images/locations/" +
                               selectedEvent.image
-                            : selectedEvent.logo
-                            ? "https://www.afterlive.cloud/images/logos/" +
+                            : "https://www.afterlive.cloud/images/locations/" +
                               selectedEvent.logo
-                            : "/fallback.jpg" // istersen bir fallback ekleyebilirsin
                         }
                         alt={selectedEvent.title}
                         style={{

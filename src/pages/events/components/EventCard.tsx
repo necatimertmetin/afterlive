@@ -12,6 +12,7 @@ export const EventCard = ({
   city,
   location,
   image,
+  logo,
 }: Event) => {
   const [hovered, setHovered] = useState(false);
 
@@ -91,7 +92,11 @@ export const EventCard = ({
       {/* Resim alanı */}
       <Box
         component="img"
-        src={"https://www.afterlive.cloud/images/locations/" + image}
+        src={
+          logo
+            ? "https://www.afterlive.cloud/images/locations/" + logo
+            : "https://www.afterlive.cloud/images/locations/" + image
+        }
         alt={title}
         sx={{
           width: "100%",
